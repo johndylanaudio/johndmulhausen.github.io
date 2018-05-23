@@ -133,28 +133,11 @@ An example of a custom target ID in the documentation is the topic on
 It has a long heading that breaks the normal markdown linking mechanism,
 so we added a custom ID above the target heading.
 
-### Images
+#### Images
 
-- A small cute image: ![a small cute image](/images/oculusgo.jpg)
+![a small cute image](/images/oculusgo.jpg)
 
-- A small cute image that is a link. The extra newline here makes it not show
-  inline:
-
-  [![a small cute image](/images/oculusgo.jpg)](https://www.oculus.com/)
-
-- A big wide image: ![a pretty wide image](/images/banner_image_24512.png)
-
-- The same as above but using HTML: <img src="/images/banner_image_24512.png" alt="a pretty wide image using HTML"/>
-
-[Some Bootstrap image classes](https://v4-alpha.getbootstrap.com/content/images/)
-might be interesting. You can use them with Markdown or HTML images.
-
-- An image using the Bootstrap "thumbnail" class: ![an image as a thumbnail](/images/oculusgo.jpg){: class="img-thumbnail" }
-
-- The same one, but using HTML: <img class="img-thumbnail" src="/images/oculusgo.jpg" alt="a pretty wide image as a thumbnail, using HTML"/>
-
-
-## Lists
+#### Lists
 
 - Bullet list item 1
 - Bullet list item 2
@@ -301,12 +284,6 @@ You can nest captures within each other to represent more complex logic with Liq
 - In-line variables set via `assign` or `capture` are available for the remainder of the page after they are set.
 - If you include a file, you can pass key-value pairs at the same time. These are available as include variables, like `{{ include.toc_min }}`.
 
-### Image formatting
-
-This image was originally created on a white background and converted to a transparent background (or so it seems). In night-mode, the text still shows traces of the white and looks garbled. To fix this, we apply a white background inline with a class defined in _scss/_night-mode.css (and incorporated into style.css): `img.white-bg { background-color: white; }`.
-
-![alt_text](machine/img/provision-use-case.png){: .white-bg}
-
 ## Bootstrap and CSS tricks
 
 Here are cool components you can include on Docs pages using
@@ -314,170 +291,26 @@ Here are cool components you can include on Docs pages using
 
 ### Tabs
 
-Here are some tabs:
+Here are some tabs. They are just Bootstrap 4 tabs, so look up their docs. 
 
+<!-- Nav tabs -->
 <ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" data-target="#tab1">TAB 1 HEADER</a></li>
-  <li><a data-toggle="tab" data-target="#tab2">TAB 2 HEADER</a></li>
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+  </li>
 </ul>
+
+<!-- Tab panes -->
 <div class="tab-content">
-  <div id="tab1" class="tab-pane fade in active">TAB 1 CONTENT<hr></div>
-  <div id="tab2" class="tab-pane fade">TAB 2 CONTENT<hr></div>
-</div>
-
-You need to adjust the `id` and `data-target` values to match your use case.
-
-The `<hr>`'s are included simply to add visual separation between tabbed content
-and the other topics on the page.
-
-If you have Markdown inside the content of the `<div>`, just add `markdown="1"`
-as an attribute in the HTML for the `<div>` so that Kramdown renders it.
-
-<ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" data-target="#tab3">TAB 1 HEADER</a></li>
-  <li><a data-toggle="tab" data-target="#tab4">TAB 2 HEADER</a></li>
-</ul>
-<div class="tab-content">
-<div id="tab3" class="tab-pane fade in active" markdown="1">
-#### A Markdown header
-
-- list item 1
-- list item 2
-<hr>
-</div>
-<div id="tab4" class="tab-pane fade" markdown="1">
-#### Another Markdown header
-
-- list item 3
-- list item 4
-<hr>
-</div>
-</div>
-
-#### Synchronizing multiple tab groups
-
-Consider an example where you have something like one tab per language, and
-you have multiple tab sets like this on a page. You might want them to all
-toggle together. We have Javascript that loads on every page that lets you
-do this by setting the `data-group` attributes to be the same. The
-`data-target` attributes still need to point to unique div IDs.
-
-In this example, selecting `Go` or `Python` in one tab set toggles the
-other tab set to match.
-
-<ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" data-target="#go" data-group="go">Go</a></li>
-  <li><a data-toggle="tab" data-target="#python" data-group="python">Python</a></li>
-</ul>
-<div class="tab-content">
-  <div id="go" class="tab-pane fade in active">Go content here<hr></div>
-  <div id="python" class="tab-pane fade in">Python content here<hr></div>
-</div>
-
-And some content between the two sets, just for fun...
-
-<ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" data-target="#go-2" data-group="go">Go</a></li>
-  <li><a data-toggle="tab" data-target="#python-2" data-group="python">Python</a></li>
-</ul>
-<div class="tab-content">
-  <div id="go-2" class="tab-pane fade in active">Go content here<hr></div>
-  <div id="python-2" class="tab-pane fade in">Python content here<hr></div>
-</div>
-
-
-### Cards
-
-In a Bootstrap row, your columns need to add up to 12. Here are three cards in
-a row, each of which takes up 1/3 (4/12) of the row.
-
-<div class="row">
-  <div class="panel col-xs-12 col-md-4"><p>This takes up 1/3 of the row unless the screen is small,
-then it takes up the whole row.</p></div>
-  <div class="panel col-xs-12 col-md-4"><p>This takes up 1/3 of the row unless the screen is small,
-then it takes up the whole row.</p></div>
-  <div class="panel col-xs-12 col-md-4"><p>This takes up 1/3 of the row unless the screen is small,
-then it takes up the whole row.</p></div>
-</div>
-
-### Expand/Collapse accordions
-
-You can use the Bootstrap and CSS to add expand/collapse accordions. This
-implementation makes use of the `.panel-heading` classes in
-[`_utilities.scss`](/_scss/_utilities.scss), along with [FontAwesome
-icons](http://fontawesome.io/cheatsheet/){: target="_blank" class="_" }
-<i class="fa fa-caret-down" aria-hidden="true"></i> (fa-caret-down) and
-<i class="fa fa-caret-up" aria-hidden="true"></i> (fa-caret-up).
-
-Adding `block` to the `div` class `collapse` gives you some padding around the
-sample content. This works nicely for standard text. If you have a code sample,
-the padding renders as white space around the code block grey background. If we
-don't like this effect, we can remove `block` for code samples.
-
-The `style="cursor: pointer"` tag enables the expand/collapse functionality to
-work on mobile. (You can use the [Xcode iPhone simulator](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html#//apple_ref/doc/uid/TP40012848-CH5-SW4){: target="_blank" class="_" } to test on mobile.)
-
-There are a lot of samples out there for Bootstrap accordions. This is the model
-we used: [PPxOJX accordion sample with HTML and
-CSS](https://codepen.io/anon/pen/PPxOJX){: target="_blank" class="_" }. (Here is
-another example, but it uses Javascript, whereas the implementation shown
-[here](https://www.bootply.com/89084){: target="_blank" class="_" } is Bootstrap
-and CSS only.)
-
-> Make sure `data-target`'s and `id`'s match, and are unique
->
->For each drop-down, the value for `data-target` and
-`collapse` `id` must match, and id's must be unique per page. In this example,
-we name these `collapseSample1` and `collapseSample2`. Check out the
-[Compose file structure example](/compose/compose-file/index.md#compose-file-structure-and-examples)
-to see another example.
-{: .important-vanilla}
-
-<div class="panel panel-default">
-    <div class="panel-heading collapsed" data-toggle="collapse" data-target="#collapseSample1" style="cursor: pointer">
-    Oculus hello-world example
-    <i class="chevron fa fa-fw"></i></div>
-    <div class="collapse block" id="collapseSample1">
-<pre><code>
-$ oculus run hello-world
-Unable to find image 'hello-world:latest' locally
-latest: Pulling from library/hello-world
-b04784fba78d: Pull complete
-Digest: sha256:f3b3b28a45160805bb16542c9531888519430e9e6d6ffc09d72261b0d26ff74f
-Status: Downloaded newer image for hello-world:latest
-
-Hello from Oculus!
-This message shows that your installation appears to be working correctly.
-
-To generate this message, Oculus took the following steps:
- 1. The Oculus client contacted the Oculus daemon.
- 2. The Oculus daemon pulled the "hello-world" image from the Oculus Hub.
- 3. The Oculus daemon created a new container from that image which runs the
-    executable that produces the output you are currently reading.
- 4. The Oculus daemon streamed that output to the Oculus client, which sent it
-    to your terminal.
-
-To try something more ambitious, you can run an Ubuntu container with:
- $ oculus run -it ubuntu bash
-
-Share images, automate workflows, and more with a free Oculus ID:
- https://cloud.oculus.com/
-
-For more examples and ideas, visit:
- https://docs.oculus.com/engine/userguide/
-
-</code></pre>
-    </div>
-    <div class="panel-heading collapsed" data-toggle="collapse" data-target="#collapseSample2"  style="cursor: pointer"> Another Sample <i class="chevron fa fa-fw"></i></div>
-    <div class="collapse block" id="collapseSample2">
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
+  <div class="tab-pane container active" id="home">home text</div>
+  <div class="tab-pane container fade" id="menu1">menu1 text</div>
+  <div class="tab-pane container fade" id="menu2">menu2 text</div>
 </div>
 
 ### Columnar text

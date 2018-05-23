@@ -1,4 +1,79 @@
 /* CSS Document */
+.nav-ite, ._37ds, .bxPageSiteMap__listItem {
+  list-style-type: none !important;
+  margin: 0px !important;
+}
+.tab-content {
+  margin-bottom: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    column-rule-color: rgb(50, 52, 54);
+    caret-color: rgb(50, 52, 54);
+    border: 1px outset rgb(128, 128, 128);
+    border-spacing: 0px 0px;
+    outline: rgb(50, 52, 54) none 0px;
+}/*#TABLE_1*/
+
+tbody {
+    border-collapse: collapse;
+    column-rule-color: rgb(50, 52, 54);
+    caret-color: rgb(50, 52, 54);
+    border: 0px none rgb(128, 128, 128);
+    outline: rgb(50, 52, 54) none 0px;
+}/*#TBODY_2*/
+
+tr {
+    border-collapse: collapse;
+    vertical-align: middle;
+    column-rule-color: rgb(50, 52, 54);
+    perspective-origin: 131.6px 20.4px;
+    transform-origin: 131.6px 20.4px;
+    caret-color: rgb(50, 52, 54);
+    border: 0px none rgb(128, 128, 128);
+    outline: rgb(50, 52, 54) none 0px;
+}/*#TR_3, #TR_7, #TR_11*/
+
+th {
+    border-collapse: collapse;
+    color: white;
+    background-color: black;
+    text-align: -webkit-left;
+    vertical-align: bottom;
+    column-rule-color: rgb(50, 52, 54);
+    caret-color: rgb(50, 52, 54);
+    border: 1px inset rgb(128, 128, 128);
+    outline: rgb(50, 52, 54) none 0px;
+    padding: 8px !important;
+}/*#TH_4*/
+
+
+td {
+    border-collapse: collapse;
+    text-size-adjust: 100%;
+    vertical-align: top;
+    column-rule-color: rgb(50, 52, 54);
+    caret-color: rgb(50, 52, 54);
+    border: 1px inset rgb(128, 128, 128);
+    outline: rgb(50, 52, 54) none 0px;
+    padding: 8px !important;
+}/*#TD_8, #TD_12*/
+
+
+
+ul li {
+    color: rgb(119, 120, 121);
+    text-rendering: optimizeLegibility;
+    column-rule-color: rgb(119, 120, 121);
+    caret-color: rgb(119, 120, 121);
+    border: 0px none rgb(119, 120, 121);
+    margin: 8px 0px !important;
+    outline: rgb(119, 120, 121) none 0px;
+    list-style-type: disc;
+    margin-left: 23px !important;
+}/*#LI_1*/
+
 
 h1 {
     color: rgb(28, 30, 32) !important;
@@ -7,10 +82,7 @@ h1 {
     text-decoration: none solid rgb(28, 30, 32);
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
-    width: 824px;
     column-rule-color: rgb(28, 30, 32);
-    perspective-origin: 412px 24px;
-    transform-origin: 412px 24px;
     caret-color: rgb(28, 30, 32);
     border: 0px none rgb(28, 30, 32);
     font: normal normal 100 normal 40px / 48px "Oculus Sans", Arial, Helvetica, sans-serif !important;
@@ -26,10 +98,7 @@ h2 {
     text-decoration: none solid rgb(28, 30, 32);
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
-    width: 854px;
     column-rule-color: rgb(28, 30, 32);
-    perspective-origin: 427px 19px;
-    transform-origin: 427px 19px;
     caret-color: rgb(28, 30, 32);
     border: 0px none rgb(28, 30, 32);
     font: normal normal 100 normal 30px / 38px "Oculus Sans", Arial, Helvetica, sans-serif !important;
@@ -40,8 +109,6 @@ h2 {
 
 p, li, td {
     color: rgb(119, 120, 121);
-    text-align: left;
-    text-decoration: none solid rgb(119, 120, 121);
     text-rendering: optimizeLegibility;
     column-rule-color: rgb(119, 120, 121);
     caret-color: rgb(119, 120, 121);
@@ -67,8 +134,6 @@ pre {
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
     column-rule-color: rgb(50, 52, 54);
-    perspective-origin: 412.297px 13px;
-    transform-origin: 412.297px 13px;
     caret-color: rgb(50, 52, 54);
     background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
     border: 0px none rgb(50, 52, 54);
@@ -90,15 +155,13 @@ pre {
     padding: 12px;
 }/*#PRE_2*/
 
-h3 {
+h5 {
     color: rgb(119, 120, 121) !important;
     text-align: left;
     text-decoration: none solid rgb(119, 120, 121);
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
     column-rule-color: rgb(119, 120, 121);
-    perspective-origin: 0px 0px;
-    transform-origin: 0px 0px;
     caret-color: rgb(119, 120, 121);
     border: 0px none rgb(119, 120, 121);
     font: normal normal 600 normal 18px / 24px "Oculus Sans", Arial, Helvetica, sans-serif !important;
@@ -106,17 +169,14 @@ h3 {
 }/*#STRONG_1*/
 
 
-h4 {
+h3 {
     color: rgb(28, 30, 32) !important;
     height: 32px;
     text-align: left;
     text-decoration: none solid rgb(28, 30, 32);
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
-    width: 564px;
     column-rule-color: rgb(28, 30, 32);
-    perspective-origin: 282px 16.5px;
-    transform-origin: 282px 16.5px;
     caret-color: rgb(28, 30, 32);
     border-top: 0px none rgb(28, 30, 32);
     border-right: 0px none rgb(28, 30, 32);
@@ -126,17 +186,14 @@ h4 {
     margin: 0px 0px 19.2px !important;
     outline: rgb(28, 30, 32) none 0px;
 }
-h5 {
+h4 {
     color: rgb(28, 30, 32) !important;
     height: 26px;
     text-align: left;
     text-decoration: none solid rgb(28, 30, 32);
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
-    width: 375px;
     column-rule-color: rgb(28, 30, 32);
-    perspective-origin: 187.5px 13px;
-    transform-origin: 187.5px 13px;
     caret-color: rgb(28, 30, 32);
     border: 0px none rgb(28, 30, 32);
     font: normal normal 700 normal 18px / 26px "Oculus Sans", Arial, Helvetica, sans-serif !important;
@@ -160,8 +217,6 @@ h5 {
     white-space: nowrap;
     width: 214.531px;
     column-rule-color: rgb(255, 255, 255);
-    perspective-origin: 107.266px 24px;
-    transform-origin: 107.266px 24px;
     user-select: none;
     caret-color: rgb(255, 255, 255);
     background: rgb(28, 30, 32) none repeat scroll 0% 0% / auto padding-box border-box;
