@@ -38,17 +38,13 @@ h2 {
 }/*#H2_1*/
 
 
-p {
+p, li, td {
     color: rgb(119, 120, 121);
     text-align: left;
     text-decoration: none solid rgb(119, 120, 121);
     text-rendering: optimizeLegibility;
-    text-size-adjust: 100%;
     column-rule-color: rgb(119, 120, 121);
-    perspective-origin: 412px 72px;
-    transform-origin: 412px 72px;
     caret-color: rgb(119, 120, 121);
-    border: 0px none rgb(119, 120, 121);
     font: normal normal 400 normal 18px / 24px "Oculus Sans", Arial, Helvetica, sans-serif;
     margin: 18px 0px !important;
     outline: rgb(119, 120, 121) none 0px;

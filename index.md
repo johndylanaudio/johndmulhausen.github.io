@@ -135,12 +135,12 @@ so we added a custom ID above the target heading.
 
 ### Images
 
-- A small cute image: ![a small cute image](/images/footer_moby_icon.png)
+- A small cute image: ![a small cute image](/images/oculusgo.jpg)
 
 - A small cute image that is a link. The extra newline here makes it not show
   inline:
 
-  [![a small cute image](/images/footer_moby_icon.png)](https://www.oculus.com/)
+  [![a small cute image](/images/oculusgo.jpg)](https://www.oculus.com/)
 
 - A big wide image: ![a pretty wide image](/images/banner_image_24512.png)
 
@@ -149,22 +149,10 @@ so we added a custom ID above the target heading.
 [Some Bootstrap image classes](https://v4-alpha.getbootstrap.com/content/images/)
 might be interesting. You can use them with Markdown or HTML images.
 
-- An image using the Bootstrap "thumbnail" class: ![an image as a thumbnail](/images/footer_moby_icon.png){: class="img-thumbnail" }
+- An image using the Bootstrap "thumbnail" class: ![an image as a thumbnail](/images/oculusgo.jpg){: class="img-thumbnail" }
 
-- The same one, but using HTML: <img class="img-thumbnail" src="/images/footer_moby_icon.png" alt="a pretty wide image as a thumbnail, using HTML"/>
+- The same one, but using HTML: <img class="img-thumbnail" src="/images/oculusgo.jpg" alt="a pretty wide image as a thumbnail, using HTML"/>
 
-## Videos
-
-You can add a link to a YouTube video like this:
-
-[![Deploying Swarms on Microsoft Azure with Oculus Cloud](/oculus-cloud/cloud-swarm/images/video-azure-oculus-cloud.png)](https://www.youtube.com/watch?v=LlpyiGAVBVg "Deploying Swarms on Microsoft Azure with Oculus Cloud"){:target="_blank" class="_"}
-
-To make the `.png` shown above, first take a screen snap of the YouTube video
-you want to use, then use a graphics app to overlay a play button onto the
-image.
-
-For the overlay, you can use the play button at
-[/oculus-cloud/images/](https://github.com/oculus/oculus.github.io/tree/master/oculus-cloud/images).
 
 ## Lists
 
@@ -401,16 +389,15 @@ And some content between the two sets, just for fun...
 ### Cards
 
 In a Bootstrap row, your columns need to add up to 12. Here are three cards in
-a row, each of which takes up 1/3 (4/12) of the row. You need a couple `<br />`s
-to clear the row before.<br /><br />
+a row, each of which takes up 1/3 (4/12) of the row.
 
 <div class="row">
-  <div class="panel col-xs-12 col-md-4">This takes up 1/3 of the row unless the screen is small,
-then it takes up the whole row.</div>
-  <div class="panel col-xs-12 col-md-4">This takes up 1/3 of the row unless the screen is small,
-then it takes up the whole row.</div>
-  <div class="panel col-xs-12 col-md-4">This takes up 1/3 of the row unless the screen is small,
-then it takes up the whole row.</div>
+  <div class="panel col-xs-12 col-md-4"><p>This takes up 1/3 of the row unless the screen is small,
+then it takes up the whole row.</p></div>
+  <div class="panel col-xs-12 col-md-4"><p>This takes up 1/3 of the row unless the screen is small,
+then it takes up the whole row.</p></div>
+  <div class="panel col-xs-12 col-md-4"><p>This takes up 1/3 of the row unless the screen is small,
+then it takes up the whole row.</p></div>
 </div>
 
 ### Expand/Collapse accordions
@@ -496,9 +483,9 @@ culpa qui officia deserunt mollit anim id est laborum.</p>
 ### Columnar text
 
 You can use the CSS `column-count` to flow your text into multiple columns.
-You need a couple `<br />`s to clear the row before.<br /><br />
+You need a couple `<br />`s to clear the row before.
 
-<div style="column-count: 3">
+<div style="column-count: 3"><p>This example uses a HTML div. This example uses a HTML div. This example uses a HTML div.
 This example uses a HTML div. This example uses a HTML div. This example uses a HTML div.
 This example uses a HTML div. This example uses a HTML div. This example uses a HTML div.
 This example uses a HTML div. This example uses a HTML div. This example uses a HTML div.
@@ -507,7 +494,7 @@ This example uses a HTML div. This example uses a HTML div. This example uses a 
 This example uses a HTML div. This example uses a HTML div. This example uses a HTML div.
 This example uses a HTML div. This example uses a HTML div. This example uses a HTML div.
 This example uses a HTML div. This example uses a HTML div. This example uses a HTML div.
-This example uses a HTML div. This example uses a HTML div. This example uses a HTML div.
+</p>
 </div>
 
 This example does it with Markdown. You can't have any blank lines or it breaks the Markdown block up.
@@ -648,24 +635,41 @@ Rouge provides lots of different code block "hints". If you leave off the hint,
 it tries to guess and sometimes gets it wrong. These are just a few hints that
 we use often.
 
-### Raw, no highlighting
+### C++
 
-The raw markup is needed to keep Liquid from interperting the things with double
+```c++
+// Include the OculusVR SDK
+#include <OVR_CAPI.h>
+void Application()
+{
+   ovrResult result = ovr_Initialize(nullptr);
+   if (OVR_FAILURE(result))
+       return;
+
+   ovrSession session;
+   ovrGraphicsLuid luid;
+   result = ovr_Create(&session, &luid);
+   if (OVR_FAILURE(result))
+   {
+      ovr_Shutdown();
+      return;
+   }
+
+   ovrHmdDesc desc = ovr_GetHmdDesc(session);
+   ovrSizei resolution = desc.Resolution;
+
+   ovr_Destroy(session);
+   ovr_Shutdown();
+}
+```
+
+### Using "raw"
+
+The "raw" markup is needed to keep Liquid from interpreting the things with double
 braces as templating language.
 
 {% raw %}
-```none
-none with raw
-$ some command with {{double braces}}
-$ some other command
-```
-{% endraw %}
-
-### Raw, Bash
-
-{% raw %}
 ```bash
-bash with raw
 $ some command with {{double braces}}
 $ some other command
 ```
@@ -746,44 +750,6 @@ nodaemon=true
 
 [program:sshd]
 command=/usr/sbin/sshd -D
-```
-
-### Oculusfile
-
-To enable syntax highlighting for Oculusfiles, use the `conf` lexer, for now.
-In the future, native Oculusfile support is coming to Rouge.
-
-```conf
-#
-# example Oculusfile for https://docs.oculus.com/examples/postgresql_service/
-#
-
-FROM ubuntu
-
-RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
-
-RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" > /etc/apt/sources.list.d/pgdg.list
-
-RUN apt-get update && apt-get install -y python-software-properties software-properties-common postgresql-9.3 postgresql-client-9.3 postgresql-contrib-9.3
-
-# Note: The official Debian and Ubuntu images automatically ``apt-get clean``
-# after each ``apt-get``
-
-USER postgres
-
-RUN    /etc/init.d/postgresql start &&\
-    psql --command "CREATE USER oculus WITH SUPERUSER PASSWORD 'oculus';" &&\
-    createdb -O oculus oculus
-
-RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/9.3/main/pg_hba.conf
-
-RUN echo "listen_addresses='*'" >> /etc/postgresql/9.3/main/postgresql.conf
-
-EXPOSE 5432
-
-VOLUME  ["/etc/postgresql", "/var/log/postgresql", "/var/lib/postgresql"]
-
-CMD ["/usr/lib/postgresql/9.3/bin/postgres", "-D", "/var/lib/postgresql/9.3/main", "-c", "config_file=/etc/postgresql/9.3/main/postgresql.conf"]
 ```
 
 ### YAML
