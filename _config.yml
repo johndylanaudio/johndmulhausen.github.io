@@ -13,7 +13,13 @@ safe: false
 lsi: false
 url: https://developer.oculus.com
 
-
+defaults:
+-
+  scope:
+    path: ""
+    type: "pages"
+  values:
+    layout: docs
 # Assets
 #
 # We specify the directory for Jekyll so we can use @imports.
