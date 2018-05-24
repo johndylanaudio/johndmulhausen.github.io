@@ -22,7 +22,7 @@ Cool? Let's dive in!
 # Heading 1
 
 Most pages don't actually have a H1 heading. The page title from the metadata is
-automatically inserted. 
+automatically inserted.
 
 ## Heading 2
 
@@ -197,17 +197,6 @@ only need to do it on the first one. If you have a `<th>`, set it there.
   </tr>
 </table>
 
-## Glossary links and content
-
-The glossary source lives in the documentation repository
-[oculus.github.io](https://github.com/oculus/oculus.github.io) in
-`_data/glossary.yaml`. The glossary publishes to
-[https://docs.oculus.com/glossary/](/glossary/).
-
-To update glossary content, edit `_data/glossary.yaml`.
-
-To link to a glossary term, link to `glossary.md?term=YourGlossaryTerm` (for
-example, [swarm](glossary.md?term=swarm)).
 
 ## Site-wide variables
 
@@ -269,7 +258,7 @@ Here are cool components you can include on Docs pages using
 
 ### Tabs
 
-Here are some tabs. They are just Bootstrap 4 tabs, so look up their docs. 
+Here are some tabs. They are just Bootstrap 4 tabs, so look up their docs.
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs">
