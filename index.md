@@ -1,5 +1,4 @@
 ---
-layout: main
 title: Welcome to the documentation test page!
 ---
 This is a demo of components, tags, styles, tools, and strategies we use for the
@@ -23,39 +22,19 @@ Cool? Let's dive in!
 # Heading 1
 
 Most pages don't actually have a H1 heading. The page title from the metadata is
-automatically inserted. We have included it here to show all heading levels, and
-set front matter as `toc_min: 1` so that it shows in the navigation bar (on-page
-topics).
+automatically inserted. 
 
 ## Heading 2
 
-By default, this is the highest heading included in the right navigation bar. To
-include more heading levels, set `toc_min: 1` in the page's front-matter (as is
-done on this `test.md` page). You can go all the way to 6, but if `toc_min` is
-geater than `toc_max` then no headings are shown.
-
 ### Heading 3
-
-This is the lowest heading included in the right-nav, by default. To include
-more heading levels, set `toc_max: 4` in the page's front-matter. You can go all
-the way to 6.
 
 #### Heading 4
 
-This heading is not included in the right-nav. To include it set `toc_max: 4` in
-the page's front-matter.
-
 ##### Heading 5
-
-This heading is not included in the right-nav. To include it set `toc_max: 5` in
-the page's front-matter.
 
 ###### Heading 6
 
 This is probably too many headings. Try to avoid it.
-
-This heading is not included in the right-nav. To include it set `toc_max: 6` in
-the page's front-matter.
 
 ## Typography
 
