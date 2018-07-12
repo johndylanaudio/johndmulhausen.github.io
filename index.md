@@ -45,7 +45,6 @@ culpa qui officia deserunt mollit anim id est laborum.
 - **<u>underline bold</u>**
 - ***<u>underline bold italic</u>***
 - `monospace text`
-- **`monospace bold`**
 
 ## Links and images
 
