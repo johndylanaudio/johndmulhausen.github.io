@@ -2,59 +2,26 @@
 title: Welcome to the documentation test page!
 ---
 This is a demo of components, tags, styles, tools, and strategies we use for the
-docs. We explain the code behind the published page and demo the effects. So, if
-you want to see, for example, how admonitions and notes are coded in markdown,
-read the section on [Admonitions (notes)](/test/#admonitions-notes) on the web
-published page and study the pre-processed `test.md` to see how they are
-implemented. The documentation team uses this page as "note to self"
-reminders. Since we invite docs suggestions and contributions from the
-community, we've always made the test page generally available.
-
-If you want to understand how something in the docs is coded, use this page is
-as a resource.
-
-If, in the course of making docs updates and suggestions, you develop a new
-strategy or component for the docs, feel free to add a demo and explanation to
-this test page and submit a PR for it so we can review and discuss it.
-
-Cool? Let's dive in!
+docs.
 
 # Heading 1
 
 Most pages don't actually have a H1 heading. The page title from the metadata is
-automatically inserted. We have included it here to show all heading levels, and
-set front matter as `toc_min: 1` so that it shows in the navigation bar (on-page
-topics).
+automatically inserted.
 
 ## Heading 2
 
-By default, this is the highest heading included in the right navigation bar. To
-include more heading levels, set `toc_min: 1` in the page's front-matter (as is
-done on this `test.md` page). You can go all the way to 6, but if `toc_min` is
-geater than `toc_max` then no headings are shown.
+When writing docs, always use this as your maximum heading
 
 ### Heading 3
 
-This is the lowest heading included in the right-nav, by default. To include
-more heading levels, set `toc_max: 4` in the page's front-matter. You can go all
-the way to 6.
-
 #### Heading 4
 
-This heading is not included in the right-nav. To include it set `toc_max: 4` in
-the page's front-matter.
-
 ##### Heading 5
-
-This heading is not included in the right-nav. To include it set `toc_max: 5` in
-the page's front-matter.
 
 ###### Heading 6
 
 This is probably too many headings. Try to avoid it.
-
-This heading is not included in the right-nav. To include it set `toc_max: 6` in
-the page's front-matter.
 
 ## Typography
 
@@ -218,29 +185,10 @@ only need to do it on the first one. If you have a `<th>`, set it there.
   </tr>
 </table>
 
-## Glossary links and content
-
-The glossary source lives in the documentation repository
-[oculus.github.io](https://github.com/oculus/oculus.github.io) in
-`_data/glossary.yaml`. The glossary publishes to
-[https://docs.oculus.com/glossary/](/glossary/).
-
-To update glossary content, edit `_data/glossary.yaml`.
-
-To link to a glossary term, link to `glossary.md?term=YourGlossaryTerm` (for
-example, [swarm](glossary.md?term=swarm)).
 
 ## Site-wide variables
 
-Look in the top-level `_config.yml` for site-wide variables, such as
-`site.oculus_ce_stable_version`. To use them, use Liquid like:
-
-```liquid
-{% raw %}{{ site.oculus_ce_stable_version }}{% endraw %}
-```
-
-The current value of `site.oculus_ce_stable_version` is
-{{ site.oculus_ce_stable_version }}.
+Look in the top-level `_config.yml` for site-wide variables.
 
 ## Mixing Markdown and HTML
 
@@ -467,6 +415,18 @@ Rouge provides lots of different code block "hints". If you leave off the hint,
 it tries to guess and sometimes gets it wrong. These are just a few hints that
 we use often.
 
+### Using "raw"
+
+The "raw" markup is needed to keep Liquid from interpreting the things with double
+braces as templating language.
+
+{% raw %}
+```bash
+$ some command with {{double braces}}
+$ some other command
+```
+{% endraw %}
+
 ### C++
 
 ```c++
@@ -495,51 +455,10 @@ void Application()
 }
 ```
 
-### Using "raw"
-
-The "raw" markup is needed to keep Liquid from interpreting the things with double
-braces as templating language.
-
-{% raw %}
-```bash
-$ some command with {{double braces}}
-$ some other command
-```
-{% endraw %}
-
 ### Bash
 
 ```bash
 $ echo "deb https://packages.oculus.com/1.12/apt/repo ubuntu-trusty main" | sudo tee /etc/apt/sources.list.d/oculus.list
-```
-
-### Go
-
-```go
-incoming := map[string]interface{}{
-    "asdf": 1,
-    "qwer": []interface{}{},
-    "zxcv": []interface{}{
-        map[string]interface{}{},
-        true,
-        int(1e9),
-        "tyui",
-    },
-}
-```
-
-### Python
-
-```python
-return html.format(name=os.getenv('NAME', "world"), hostname=socket.gethostname(), visits=visits)
-```
-
-### Ruby
-
-```ruby
-oculus_service 'default' do
-  action [:create, :start]
-end
 ```
 
 ### JSON
