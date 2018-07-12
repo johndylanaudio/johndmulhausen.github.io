@@ -15,9 +15,15 @@ When writing docs, always use this as your maximum heading
 
 ### Heading 3
 
+Heading 3 text here, implies a sub-section of the topic being covered in heading 2
+
 #### Heading 4
 
+Heading 4 text here, ditto
+
 ##### Heading 5
+
+Heading 5 text here, ditto
 
 ###### Heading 6
 
