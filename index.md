@@ -1,5 +1,4 @@
 ---
-layout: main
 title: Welcome to the documentation test page!
 ---
 This is a demo of components, tags, styles, tools, and strategies we use for the
@@ -291,7 +290,7 @@ Here are cool components you can include on Docs pages using
 
 ### Tabs
 
-Here are some tabs. They are just Bootstrap 4 tabs, so look up their docs. 
+Here are some tabs. They are just Bootstrap 4 tabs, so look up their docs.
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs">

@@ -1,0 +1,37 @@
+name: Oculus Documentation
+markdown: kramdown
+kramdown:
+  input: GFM
+  gfm_quirks: [paragraph_end, no_auto_typographic]
+  html_to_native: true
+  hard_wrap: false
+  syntax_highlighter: rouge
+incremental: true
+permalink: pretty
+safe: false
+lsi: false
+url: https://developer.oculus.com
+strict_front_matter: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: main
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: blog
+      skip-autotitle: true
+      permalink: /blog/:title/
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _scss
+  style:            :compressed
