@@ -6,6 +6,8 @@ function locatePage(tree)
 {
   function walkBranch(branch)
   {
+    console.log("BRANCH:")
+    console.log(branch)
     for (var k=0;k<branch.length;k++)
     {
       if (branch[k].section) {
@@ -23,9 +25,12 @@ function locatePage(tree)
     }
   }
   var foundPage = false;
+  console.log("TREE:")
+  console.log(tree)
   walkBranch(tree)
   return foundPage;
 }
+var leftNav = new Array();
 function renderLeftNav(tree)
 {
   for (var j=0;j<tree.length;j++)
@@ -33,32 +38,35 @@ function renderLeftNav(tree)
     if (tree[j].section)
     {
       // this is a branch; output nested HTML, recurse/process subsection
+      leftNav.push('<i class="_37e7 chevronRight _3n44 _3n45 _3n46 _3n47"></i><a href="' + tree[j].path + '" target="_self" class="_37e8">'+ tree[j].title +'</a>')
+      leftNav.push('<ul class="_37e9">')
       renderLeftNav(tree[j].section);
+      leftNav.push('</ul>')
     } else {
       // just a regular old topic; this is a leaf, not a branch; render a link!
+      leftNav.push('<li class="_37ds"><a href="' + tree[j].path + '" target="_self" class="_37e8">'+ tree[j].title +'</a></li>')
       if (tree[j].path == pageURL)
       {
-        sectionToHighlight = currentSection;
+        // you are here logic TODO
       }
   }
 }
+}
 function writeNavigation(tree)
 {
+  console.log(tree)
+
+  //build topnav
+  var topNav = new Array();
   for (i=0;i<tree.topnav.length;i++)
   {
-      currentSection = tree.topnav[i].node;
-      // build vertical nav
-      var youAreHere = locatePage(tree[tree.topnav[i].node]);
-      if (youAreHere || tree.topnav[i].path == pageURL)
-      {
-        renderLeftNav(tree[tree.topnav[i].node]);
-      }
-    // build horizontal nav
-    if (tree.topnav[i].path==pageURL || tree.topnav[i].node==sectionToHighlight)
-    {
-      outputHorzTabs.push(' class="active"');
-    }
+    topNav.push('<li class="_m4a _m4h _nn8 _m4d _nna"><a href="'+ tree.topnav[i].path + '" class="_m4b" tabindex="10">'+ tree.topnav[i].title +'</a></li>')
   }
-  document.getElementById('topNav').innerHTML = topNavHTML.join('');
-  document.getElementById('leftNav').innerHTML = leftNavHTML.join('');
+
+  // build leftnav
+  renderLeftNav(tree.leftnav)
+
+  // write output to DOM
+  document.getElementById('u_0_0').innerHTML = topNav.join(''); // topnav
+  document.getElementById('leftnavContainer').innerHTML = leftNav.join(''); // leftnav
 }
