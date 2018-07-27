@@ -1,4 +1,24 @@
 /* CSS Document */
+#leftnavContainer ul, #leftnavContainer li {
+  list-style-type: none !important;
+  font-family: Oculus Sans, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  text-align: left;
+}
+#leftnavContainer ul {
+  padding: 0px !important;
+  margin: 0px 0px 0px 15px !important;
+}
+#leftnavContainer li {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+#leftnavContainer a {
+  color: #8d8e8f;
+}
+.chevronRight, .chevronDown {
+  margin-left: -10px;
+}
 .nav-item, ._37ds, .bxPageSiteMap__listItem, .nav-link {
   list-style-type: none !important;
   margin: 0px !important;
