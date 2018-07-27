@@ -62,21 +62,27 @@ function renderLeftNav(tree)
 {
   for (var j=0;j<tree.length;j++)
   {
+    var youAreHere = '';
+    var openBranchHere = false;
+    if (tree[j].path == pageURL)
+    {
+      // you are here logic TODO
+      youAreHere=' id="youAreHere" style="font-weight: bold; color: black !important"';
+      openBranchHere = '';
+    } else {
+      youAreHere='';
+      openBranchHere = ' style="display:none"'
+    }
     if (tree[j].section)
     {
       // this is a branch; output nested HTML, recurse/process subsection
-      leftNav.push('<li class="_3d7s _37du"><i class="_37e7 chevronRight _3n44 _3n45 _3n46 _3n47" onclick="openBranch(this)"></i><a href="' + tree[j].path + '" target="_self" class="_37e8">'+ tree[j].title +'</a>')
-      leftNav.push('<ul class="_37e9" style="display:none">')
+      leftNav.push('<li class="_3d7s _37du"><i class="_37e7 chevronRight _3n44 _3n45 _3n46 _3n47" onclick="openBranch(this)"></i><a href="' + tree[j].path + '" target="_self" class="_37e8"'+ youAreHere +'>'+ tree[j].title +'</a>')
+      leftNav.push('<ul class="_37e9"'+openBranchHere+'>')
       renderLeftNav(tree[j].section);
       leftNav.push('</ul></li>')
     } else {
       // just a regular old topic; this is a leaf, not a branch; render a link!
-      var youAreHere = '';
-      if (tree[j].path == pageURL)
-      {
-        // you are here logic TODO
-        youAreHere=' id="youAreHere"';
-      }
+
       leftNav.push('<li class="_37ds"><a href="' + tree[j].path + '" target="_self" class="_37e8"'+ youAreHere +'>'+ tree[j].title +'</a></li>')
 
   }
@@ -86,7 +92,7 @@ function syncLeftNav(navSpot)
 {
   // open leftnav tree to current URL, bolding the parent nav items as we go
   if (!navSpot) navSpot = document.getElementById("youAreHere");
-  navSpot.setAttribute("style", "font-weight: bold; color: black"); // bold current topic
+  navSpot.setAttribute("style", "font-weight: bold; color: black !important"); // bold current topic
   navSpot.parentNode.removeAttribute("style"); // open tree by removing "display:none"
   var children = navSpot.childNodes;
   for(var i = 0; i < children.length; i++) {

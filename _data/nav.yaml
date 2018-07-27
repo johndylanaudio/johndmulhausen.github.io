@@ -1297,319 +1297,319 @@ leftnav:
           title: Command Line Utility (CLI)
         - path: https://dashboard.oculus.com/tools/rooms-and-matchmaking-debugger
           title: Rooms and Matchmaking Debugger
-    - path: /distribute/latest
-      title: Distribute
+  - path: /distribute/latest
+    title: Distribute
+    section:
+    - path: /distribute/latest/concepts/book-publish-account-management/
+      title: Account Management
       section:
-      - path: /distribute/latest/concepts/book-publish-account-management/
-        title: Account Management
+      - path: /distribute/latest/concepts/publish-account-management-intro/
+        title: Manage Your Organization and Users
+      - path: /distribute/latest/concepts/publish-account-management-bank-tax/
+        title: Manage Your Financial Account
+    - path: /distribute/latest/concepts/publish-intro/
+      title: App Distribution
+      section:
+      - path: /distribute/latest/concepts/publish-app-review/
+        title: Lifecycle of an Oculus VR App
+      - path: /distribute/latest/concepts/publish-outside-store/
+        title: Distribution Options
+      - path: /distribute/latest/concepts/publish-create-app/
+        title: App Submission and Store Review
         section:
-        - path: /distribute/latest/concepts/publish-account-management-intro/
-          title: Manage Your Organization and Users
-        - path: /distribute/latest/concepts/publish-account-management-bank-tax/
-          title: Manage Your Financial Account
-      - path: /distribute/latest/concepts/publish-intro/
-        title: App Distribution
-        section:
-        - path: /distribute/latest/concepts/publish-app-review/
-          title: Lifecycle of an Oculus VR App
-        - path: /distribute/latest/concepts/publish-outside-store/
-          title: Distribution Options
-        - path: /distribute/latest/concepts/publish-create-app/
-          title: App Submission and Store Review
+        - path: /distribute/latest/tasks/publish-submit-app-review/
+          title: App Upload and Store Submission
+        - path: /distribute/latest/concepts/publish-uploading-mobile/
+          title: Uploading Gear VR and Go Apps
           section:
-          - path: /distribute/latest/tasks/publish-submit-app-review/
-            title: App Upload and Store Submission
-          - path: /distribute/latest/concepts/publish-uploading-mobile/
-            title: Uploading Gear VR and Go Apps
+          - path: /distribute/latest/concepts/publish-mobile-manifest/
+            title: Application Manifests for Release Builds
+          - path: /distribute/latest/concepts/publish-mobile-app-signing/
+            title: Application Signing
+          - path: /distribute/latest/concepts/publish-mobile-supported-devices/
+            title: Managing Supported Devices
+        - path: /distribute/latest/concepts/publish-uploading-rift/
+          title: Uploading Rift Apps
+          section:
+          - path: /distribute/latest/concepts/publish-packaging-rift-desktopmode/
+            title: Rift Apps with Non-VR Desktop Modes
+        - path: /distribute/latest/concepts/publish-reference-platform-command-line-utility/
+          title: Oculus Platform Command Line Utility
+      - path: /distribute/latest/concepts/publish-release-channels/
+        title: Release Channels
+        section:
+        - path: /distribute/latest/tasks/publish-release-channels-view/
+          title: Viewing Release Channels
+        - path: /distribute/latest/tasks/publish-release-channels-upload/
+          title: Uploading Builds to a Release Channel
+        - path: /distribute/latest/tasks/publish-release-channels-add-users/
+          title: Inviting Users to a Release Channel
+        - path: /distribute/latest/tasks/publish-release-channels-migrate/
+          title: Copying Builds Between Release Channels
+        - path: /distribute/latest/tasks/publish-release-channels-add-custom/
+          title: Adding Custom Release Channels
+      - path: /distribute/latest/concepts/publish-content-updating/#publish-content-updating
+        title: Updating Published Apps
+    - path: /distribute/latest/concepts/publish-prep-app/
+      title: Store Review Policies
+      section:
+      - path: /distribute/latest/concepts/publish-content-guidelines/
+        title: Content Guidelines
+      - path: /distribute/latest/concepts/publish-content-bp/
+        title: Content Best Practices
+      - path: /distribute/latest/concepts/publish-rift-app-submission/
+        title: Rift Virtual Reality Check (VRC) Guidelines
+        section:
+          - path: /distribute/latest/concepts/publish-rift-app-submission-compatibility/
+            title: Rift Compatibility and SDK VRCs
             section:
-            - path: /distribute/latest/concepts/publish-mobile-manifest/
-              title: Application Manifests for Release Builds
-            - path: /distribute/latest/concepts/publish-mobile-app-signing/
-              title: Application Signing
-            - path: /distribute/latest/concepts/publish-mobile-supported-devices/
-              title: Managing Supported Devices
-          - path: /distribute/latest/concepts/publish-uploading-rift/
-            title: Uploading Rift Apps
+            - path: /distribute/latest/concepts/vrc-pc-sdk-1/
+              title: VRC.PC.SDK.1
+            - path: /distribute/latest/concepts/vrc-pc-sdk-2/
+              title: VRC.PC.SDK.2
+            - path: /distribute/latest/concepts/vrc-pc-sdk-3/
+              title: VRC.PC.SDK.3
+            - path: /distribute/latest/concepts/vrc-pc-sdk-4/
+              title: VRC.PC.SDK.4
+            - path: /distribute/latest/concepts/vrc-pc-sdk-5/
+              title: VRC.PC.SDK.5
+          - path: /distribute/latest/concepts/publish-rift-app-submission-audio/
+            title: Rift Audio VRCs
             section:
-            - path: /distribute/latest/concepts/publish-packaging-rift-desktopmode/
-              title: Rift Apps with Non-VR Desktop Modes
-          - path: /distribute/latest/concepts/publish-reference-platform-command-line-utility/
-            title: Oculus Platform Command Line Utility
-        - path: /distribute/latest/concepts/publish-release-channels/
-          title: Release Channels
-          section:
-          - path: /distribute/latest/tasks/publish-release-channels-view/
-            title: Viewing Release Channels
-          - path: /distribute/latest/tasks/publish-release-channels-upload/
-            title: Uploading Builds to a Release Channel
-          - path: /distribute/latest/tasks/publish-release-channels-add-users/
-            title: Inviting Users to a Release Channel
-          - path: /distribute/latest/tasks/publish-release-channels-migrate/
-            title: Copying Builds Between Release Channels
-          - path: /distribute/latest/tasks/publish-release-channels-add-custom/
-            title: Adding Custom Release Channels
-        - path: /distribute/latest/concepts/publish-content-updating/#publish-content-updating
-          title: Updating Published Apps
-      - path: /distribute/latest/concepts/publish-prep-app/
-        title: Store Review Policies
+            - path: /distribute/latest/concepts/vrc-pc-audio-1/
+              title: VRC.PC.Audio.1
+            - path: /distribute/latest/concepts/vrc-pc-audio-2/
+              title: VRC.PC.Audio.2
+          - path: /distribute/latest/concepts/publish-rift-app-submission-performance/
+            title: Rift Performance VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-pc-performance-1/
+              title: VRC.PC.Performance.1
+            - path: /distribute/latest/concepts/vrc-pc-performance-2/
+              title: VRC.PC.Performance.2
+            - path: /distribute/latest/concepts/vrc-pc-performance-3/
+              title: VRC.PC.Performance.3
+            - path: /distribute/latest/concepts/vrc-pc-performance-4/
+              title: VRC.PC.Performance.4
+            - path: /distribute/latest/concepts/vrc-pc-performance-5/
+              title: VRC.PC.Performance.5
+            - path: /distribute/latest/concepts/vrc-pc-performance-6/
+              title: VRC.PC.Performance.6
+            - path: /distribute/latest/concepts/vrc-pc-performance-7/
+              title: VRC.PC.Performance.7
+            - path: /distribute/latest/concepts/vrc-pc-performance-8/
+              title: VRC.PC.Performance.8
+            - path: /distribute/latest/concepts/vrc-pc-performance-9/
+              title: VRC.PC.Performance.9
+            - path: /distribute/latest/concepts/vrc-pc-performance-10/
+              title: VRC.PC.Performance.10
+          - path: /distribute/latest/concepts/publish-rift-app-submission-functional/
+            title: Rift Functional VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-pc-functional-1/
+              title: VRC.PC.Functional.1
+            - path: /distribute/latest/concepts/vrc-pc-functional-2/
+              title: VRC.PC.Functional.2
+            - path: /distribute/latest/concepts/vrc-pc-functional-3/
+              title: VRC.PC.Functional.3
+            - path: /distribute/latest/concepts/vrc-pc-functional-4/
+              title: VRC.PC.Functional.4
+            - path: /distribute/latest/concepts/vrc-pc-functional-5/
+              title: VRC.PC.Functional.5
+            - path: /distribute/latest/concepts/vrc-pc-functional-6/
+              title: VRC.PC.Functional.6
+            - path: /distribute/latest/concepts/vrc-pc-functional-7/
+              title: VRC.PC.Functional.7
+            - path: /distribute/latest/concepts/vrc-pc-functional-8/
+              title: VRC.PC.Functional.8
+          - path: /distribute/latest/concepts/publish-rift-app-submission-security/
+            title: Rift Security VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-pc-security-1/
+              title: VRC.PC.Security.1
+            - path: /distribute/latest/concepts/vrc-pc-security-2/
+              title: VRC.PC.Security.2
+            - path: /distribute/latest/concepts/vrc-pc-security-3/
+              title: VRC.PC.Security.3
+          - path: /distribute/latest/concepts/publish-rift-app-submission-input/
+            title: Rift Input VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-pc-input-1/
+              title: VRC.PC.Input.1
+            - path: /distribute/latest/concepts/vrc-pc-input-2/
+              title: VRC.PC.Input.2
+            - path: /distribute/latest/concepts/vrc-pc-input-3/
+              title: VRC.PC.Input.3
+            - path: /distribute/latest/concepts/vrc-pc-input-4/
+              title: VRC.PC.Input.4
+            - path: /distribute/latest/concepts/vrc-pc-input-5/
+              title: VRC.PC.Input.5
+            - path: /distribute/latest/concepts/vrc-pc-input-6/
+              title: VRC.PC.Input.6
+            - path: /distribute/latest/concepts/vrc-pc-input-7/
+              title: VRC.PC.Input.7
+            - path: /distribute/latest/concepts/vrc-pc-input-8/
+              title: VRC.PC.Input.8
+            - path: /distribute/latest/concepts/vrc-pc-input-9/
+              title: VRC.PC.Input.9
+            - path: /distribute/latest/concepts/vrc-pc-input-10/
+              title: VRC.PC.Input.10
+          - path: /distribute/latest/concepts/publish-rift-app-submission-tracking/
+            title: Rift Tracking VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-pc-tracking-1/
+              title: VRC.PC.Tracking.1
+            - path: /distribute/latest/concepts/vrc-pc-tracking-2/
+              title: VRC.PC.Tracking.2
+          - path: /distribute/latest/concepts/publish-rift-app-submission-asset/
+            title: Rift Asset VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-pc-asset-1/
+              title: VRC.PC.Asset.1
+            - path: /distribute/latest/concepts/vrc-pc-asset-2/
+              title: VRC.PC.Asset.2
+            - path: /distribute/latest/concepts/vrc-pc-asset-3/
+              title: VRC.PC.Asset.3
+            - path: /distribute/latest/concepts/vrc-pc-asset-4/
+              title: VRC.PC.Asset.4
+            - path: /distribute/latest/concepts/vrc-pc-asset-5/
+              title: VRC.PC.Asset.5
+            - path: /distribute/latest/concepts/vrc-pc-asset-6/
+              title: VRC.PC.Asset.6
+            - path: /distribute/latest/concepts/vrc-pc-asset-7/
+              title: VRC.PC.Asset.7
+            - path: /distribute/latest/concepts/vrc-pc-asset-8/
+              title: VRC.PC.Asset.8
+      - path: /distribute/latest/concepts/publish-mobile-req/
+        title: Mobile Virtual Reality Check (VRC) Guidelines
         section:
-        - path: /distribute/latest/concepts/publish-content-guidelines/
-          title: Content Guidelines
-        - path: /distribute/latest/concepts/publish-content-bp/
-          title: Content Best Practices
-        - path: /distribute/latest/concepts/publish-rift-app-submission/
-          title: Rift Virtual Reality Check (VRC) Guidelines
-          section:
-            - path: /distribute/latest/concepts/publish-rift-app-submission-compatibility/
-              title: Rift Compatibility and SDK VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-pc-sdk-1/
-                title: VRC.PC.SDK.1
-              - path: /distribute/latest/concepts/vrc-pc-sdk-2/
-                title: VRC.PC.SDK.2
-              - path: /distribute/latest/concepts/vrc-pc-sdk-3/
-                title: VRC.PC.SDK.3
-              - path: /distribute/latest/concepts/vrc-pc-sdk-4/
-                title: VRC.PC.SDK.4
-              - path: /distribute/latest/concepts/vrc-pc-sdk-5/
-                title: VRC.PC.SDK.5
-            - path: /distribute/latest/concepts/publish-rift-app-submission-audio/
-              title: Rift Audio VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-pc-audio-1/
-                title: VRC.PC.Audio.1
-              - path: /distribute/latest/concepts/vrc-pc-audio-2/
-                title: VRC.PC.Audio.2
-            - path: /distribute/latest/concepts/publish-rift-app-submission-performance/
-              title: Rift Performance VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-pc-performance-1/
-                title: VRC.PC.Performance.1
-              - path: /distribute/latest/concepts/vrc-pc-performance-2/
-                title: VRC.PC.Performance.2
-              - path: /distribute/latest/concepts/vrc-pc-performance-3/
-                title: VRC.PC.Performance.3
-              - path: /distribute/latest/concepts/vrc-pc-performance-4/
-                title: VRC.PC.Performance.4
-              - path: /distribute/latest/concepts/vrc-pc-performance-5/
-                title: VRC.PC.Performance.5
-              - path: /distribute/latest/concepts/vrc-pc-performance-6/
-                title: VRC.PC.Performance.6
-              - path: /distribute/latest/concepts/vrc-pc-performance-7/
-                title: VRC.PC.Performance.7
-              - path: /distribute/latest/concepts/vrc-pc-performance-8/
-                title: VRC.PC.Performance.8
-              - path: /distribute/latest/concepts/vrc-pc-performance-9/
-                title: VRC.PC.Performance.9
-              - path: /distribute/latest/concepts/vrc-pc-performance-10/
-                title: VRC.PC.Performance.10
-            - path: /distribute/latest/concepts/publish-rift-app-submission-functional/
-              title: Rift Functional VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-pc-functional-1/
-                title: VRC.PC.Functional.1
-              - path: /distribute/latest/concepts/vrc-pc-functional-2/
-                title: VRC.PC.Functional.2
-              - path: /distribute/latest/concepts/vrc-pc-functional-3/
-                title: VRC.PC.Functional.3
-              - path: /distribute/latest/concepts/vrc-pc-functional-4/
-                title: VRC.PC.Functional.4
-              - path: /distribute/latest/concepts/vrc-pc-functional-5/
-                title: VRC.PC.Functional.5
-              - path: /distribute/latest/concepts/vrc-pc-functional-6/
-                title: VRC.PC.Functional.6
-              - path: /distribute/latest/concepts/vrc-pc-functional-7/
-                title: VRC.PC.Functional.7
-              - path: /distribute/latest/concepts/vrc-pc-functional-8/
-                title: VRC.PC.Functional.8
-            - path: /distribute/latest/concepts/publish-rift-app-submission-security/
-              title: Rift Security VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-pc-security-1/
-                title: VRC.PC.Security.1
-              - path: /distribute/latest/concepts/vrc-pc-security-2/
-                title: VRC.PC.Security.2
-              - path: /distribute/latest/concepts/vrc-pc-security-3/
-                title: VRC.PC.Security.3
-            - path: /distribute/latest/concepts/publish-rift-app-submission-input/
-              title: Rift Input VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-pc-input-1/
-                title: VRC.PC.Input.1
-              - path: /distribute/latest/concepts/vrc-pc-input-2/
-                title: VRC.PC.Input.2
-              - path: /distribute/latest/concepts/vrc-pc-input-3/
-                title: VRC.PC.Input.3
-              - path: /distribute/latest/concepts/vrc-pc-input-4/
-                title: VRC.PC.Input.4
-              - path: /distribute/latest/concepts/vrc-pc-input-5/
-                title: VRC.PC.Input.5
-              - path: /distribute/latest/concepts/vrc-pc-input-6/
-                title: VRC.PC.Input.6
-              - path: /distribute/latest/concepts/vrc-pc-input-7/
-                title: VRC.PC.Input.7
-              - path: /distribute/latest/concepts/vrc-pc-input-8/
-                title: VRC.PC.Input.8
-              - path: /distribute/latest/concepts/vrc-pc-input-9/
-                title: VRC.PC.Input.9
-              - path: /distribute/latest/concepts/vrc-pc-input-10/
-                title: VRC.PC.Input.10
-            - path: /distribute/latest/concepts/publish-rift-app-submission-tracking/
-              title: Rift Tracking VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-pc-tracking-1/
-                title: VRC.PC.Tracking.1
-              - path: /distribute/latest/concepts/vrc-pc-tracking-2/
-                title: VRC.PC.Tracking.2
-            - path: /distribute/latest/concepts/publish-rift-app-submission-asset/
-              title: Rift Asset VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-pc-asset-1/
-                title: VRC.PC.Asset.1
-              - path: /distribute/latest/concepts/vrc-pc-asset-2/
-                title: VRC.PC.Asset.2
-              - path: /distribute/latest/concepts/vrc-pc-asset-3/
-                title: VRC.PC.Asset.3
-              - path: /distribute/latest/concepts/vrc-pc-asset-4/
-                title: VRC.PC.Asset.4
-              - path: /distribute/latest/concepts/vrc-pc-asset-5/
-                title: VRC.PC.Asset.5
-              - path: /distribute/latest/concepts/vrc-pc-asset-6/
-                title: VRC.PC.Asset.6
-              - path: /distribute/latest/concepts/vrc-pc-asset-7/
-                title: VRC.PC.Asset.7
-              - path: /distribute/latest/concepts/vrc-pc-asset-8/
-                title: VRC.PC.Asset.8
-        - path: /distribute/latest/concepts/publish-mobile-req/
-          title: Mobile Virtual Reality Check (VRC) Guidelines
-          section:
-            - path: /distribute/latest/concepts/publish-mobile-req-go/
-              title: Mobile Go VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-mobile-go-1/
-                title: VRC.Mobile.Go.1
-            - path: /distribute/latest/concepts/publish-mobile-req-compatibility/
-              title: Mobile SDK and Compatibility VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-mobile-sdk-1/
-                title: VRC.Mobile.SDK.1
-              - path: /distribute/latest/concepts/vrc-mobile-sdk-2/
-                title: VRC.Mobile.SDK.2
-              - path: /distribute/latest/concepts/vrc-mobile-sdk-3/
-                title: VRC.Mobile.SDK.3
-              - path: /distribute/latest/concepts/vrc-mobile-sdk-4/
-                title: VRC.Mobile.SDK.4
-            - path: /distribute/latest/concepts/publish-mobile-req-android/
-              title: Mobile Android VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-mobile-android-1/
-                title: VRC.Mobile.Android.1
-              - path: /distribute/latest/concepts/vrc-mobile-android-2/
-                title: VRC.Mobile.Android.2
-            - path: /distribute/latest/concepts/publish-mobile-req-performance/
-              title: Mobile Performance VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-mobile-performance-1/
-                title: VRC.Mobile.Performance.1
-              - path: /distribute/latest/concepts/vrc-mobile-performance-2/
-                title: VRC.Mobile.Performance.2
-              - path: /distribute/latest/concepts/vrc-mobile-performance-3/
-                title: VRC.Mobile.Performance.3
-              - path: /distribute/latest/concepts/vrc-mobile-performance-4/
-                title: VRC.Mobile.Performance.4
-              - path: /distribute/latest/concepts/vrc-mobile-performance-5/
-                title: VRC.Mobile.Performance.5
-              - path: /distribute/latest/concepts/vrc-mobile-performance-6/
-                title: VRC.Mobile.Performance.6
-            - path: /distribute/latest/concepts/publish-mobile-req-functional/
-              title: Mobile Functional VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-mobile-functional-1/
-                title: VRC.Mobile.Functional.1
-              - path: /distribute/latest/concepts/vrc-mobile-functional-2/
-                title: VRC.Mobile.Functional.2
-              - path: /distribute/latest/concepts/vrc-mobile-functional-3/
-                title: VRC.Mobile.Functional.3
-              - path: /distribute/latest/concepts/vrc-mobile-functional-4/
-                title: VRC.Mobile.Functional.4
-              - path: /distribute/latest/concepts/vrc-mobile-functional-5/
-                title: VRC.Mobile.Functional.5
-              - path: /distribute/latest/concepts/vrc-mobile-functional-6/
-                title: VRC.Mobile.Functional.6
-              - path: /distribute/latest/concepts/vrc-mobile-functional-7/
-                title: VRC.Mobile.Functional.7
-              - path: /distribute/latest/concepts/vrc-mobile-functional-8/
-                title: VRC.Mobile.Functional.8
-              - path: /distribute/latest/concepts/vrc-mobile-functional-9/
-                title: VRC.Mobile.Functional.9
-              - path: /distribute/latest/concepts/vrc-mobile-functional-10/
-                title: VRC.Mobile.Functional.10
-              - path: /distribute/latest/concepts/vrc-mobile-functional-11/
-                title: VRC.Mobile.Functional.11
-            - path: /distribute/latest/concepts/publish-mobile-req-security/
-              title: Mobile Security VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-mobile-security-1/
-                title: VRC.Mobile.Security.1
-              - path: /distribute/latest/concepts/vrc-mobile-security-2/
-                title: VRC.Mobile.Security.2
-            - path: /distribute/latest/concepts/publish-mobile-req-input/
-              title: Mobile Input VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-mobile-input-1/
-                title: VRC.Mobile.Input.1
-              - path: /distribute/latest/concepts/vrc-mobile-input-2/
-                title: VRC.Mobile.Input.2
-              - path: /distribute/latest/concepts/vrc-mobile-input-3/
-                title: VRC.Mobile.Input.3
-              - path: /distribute/latest/concepts/vrc-mobile-input-4/
-                title: VRC.Mobile.Input.4
-              - path: /distribute/latest/concepts/vrc-mobile-input-5/
-                title: VRC.Mobile.Input.5
-              - path: /distribute/latest/concepts/vrc-mobile-input-6/
-                title: VRC.Mobile.Input.6
-              - path: /distribute/latest/concepts/vrc-mobile-input-7/
-                title: VRC.Mobile.Input.7
-            - path: /distribute/latest/concepts/publish-mobile-req-asset/
-              title: Mobile Asset VRCs
-              section:
-              - path: /distribute/latest/concepts/vrc-mobile-asset-1/
-                title: VRC.Mobile.Asset.1
-              - path: /distribute/latest/concepts/vrc-mobile-asset-2/
-                title: VRC.Mobile.Asset.2
-              - path: /distribute/latest/concepts/vrc-mobile-asset-3/
-                title: VRC.Mobile.Asset.3
-              - path: /distribute/latest/concepts/vrc-mobile-asset-4/
-                title: VRC.Mobile.Asset.4
-              - path: /distribute/latest/concepts/vrc-mobile-asset-5/
-                title: VRC.Mobile.Asset.5
-              - path: /distribute/latest/concepts/vrc-mobile-asset-6/
-                title: VRC.Mobile.Asset.6
-              - path: /distribute/latest/concepts/vrc-mobile-asset-7/
-                title: VRC.Mobile.Asset.7
-              - path: /distribute/latest/concepts/vrc-mobile-asset-8/
-                title: VRC.Mobile.Asset.8
-              - path: /distribute/latest/concepts/vrc-mobile-asset-9/
-                title: VRC.Mobile.Asset.9
-      - path: /distribute/latest/concepts/log-troubleshooting/
-        title: Troubleshooting and Gathering Logs
-      - path: /distribute/latest/concepts/publish-feedback/
-        title: Contacting the Oculus Publishing Team
-      - path: /distribute/latest/concepts/user-reviews/
-        title: Customer Reviews
-      - path: /distribute/latest/concepts/accessories-guidelines-go/
-        title: Oculus Go Accessories Guidelines
-      - path: /distribute/latest/concepts/accessories-guidelines/
-        title: Rift Accessories Guidelines
-        section:
-        - path: /distribute/latest/concepts/accessories-guidelines-audio/
-          title: Audio Module
-        - path: /distribute/latest/concepts/accessories-guidelines-facial-interface/
-          title: Facial Interface
-        - path: /distribute/latest/concepts/accessories-guidelines-touch/
-          title: Oculus Touch
-        - path: /distribute/latest/concepts/accessories-guidelines-mixed-reality-mount/
-          title: Mixed Reality Capture Mount
+          - path: /distribute/latest/concepts/publish-mobile-req-go/
+            title: Mobile Go VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-mobile-go-1/
+              title: VRC.Mobile.Go.1
+          - path: /distribute/latest/concepts/publish-mobile-req-compatibility/
+            title: Mobile SDK and Compatibility VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-mobile-sdk-1/
+              title: VRC.Mobile.SDK.1
+            - path: /distribute/latest/concepts/vrc-mobile-sdk-2/
+              title: VRC.Mobile.SDK.2
+            - path: /distribute/latest/concepts/vrc-mobile-sdk-3/
+              title: VRC.Mobile.SDK.3
+            - path: /distribute/latest/concepts/vrc-mobile-sdk-4/
+              title: VRC.Mobile.SDK.4
+          - path: /distribute/latest/concepts/publish-mobile-req-android/
+            title: Mobile Android VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-mobile-android-1/
+              title: VRC.Mobile.Android.1
+            - path: /distribute/latest/concepts/vrc-mobile-android-2/
+              title: VRC.Mobile.Android.2
+          - path: /distribute/latest/concepts/publish-mobile-req-performance/
+            title: Mobile Performance VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-mobile-performance-1/
+              title: VRC.Mobile.Performance.1
+            - path: /distribute/latest/concepts/vrc-mobile-performance-2/
+              title: VRC.Mobile.Performance.2
+            - path: /distribute/latest/concepts/vrc-mobile-performance-3/
+              title: VRC.Mobile.Performance.3
+            - path: /distribute/latest/concepts/vrc-mobile-performance-4/
+              title: VRC.Mobile.Performance.4
+            - path: /distribute/latest/concepts/vrc-mobile-performance-5/
+              title: VRC.Mobile.Performance.5
+            - path: /distribute/latest/concepts/vrc-mobile-performance-6/
+              title: VRC.Mobile.Performance.6
+          - path: /distribute/latest/concepts/publish-mobile-req-functional/
+            title: Mobile Functional VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-mobile-functional-1/
+              title: VRC.Mobile.Functional.1
+            - path: /distribute/latest/concepts/vrc-mobile-functional-2/
+              title: VRC.Mobile.Functional.2
+            - path: /distribute/latest/concepts/vrc-mobile-functional-3/
+              title: VRC.Mobile.Functional.3
+            - path: /distribute/latest/concepts/vrc-mobile-functional-4/
+              title: VRC.Mobile.Functional.4
+            - path: /distribute/latest/concepts/vrc-mobile-functional-5/
+              title: VRC.Mobile.Functional.5
+            - path: /distribute/latest/concepts/vrc-mobile-functional-6/
+              title: VRC.Mobile.Functional.6
+            - path: /distribute/latest/concepts/vrc-mobile-functional-7/
+              title: VRC.Mobile.Functional.7
+            - path: /distribute/latest/concepts/vrc-mobile-functional-8/
+              title: VRC.Mobile.Functional.8
+            - path: /distribute/latest/concepts/vrc-mobile-functional-9/
+              title: VRC.Mobile.Functional.9
+            - path: /distribute/latest/concepts/vrc-mobile-functional-10/
+              title: VRC.Mobile.Functional.10
+            - path: /distribute/latest/concepts/vrc-mobile-functional-11/
+              title: VRC.Mobile.Functional.11
+          - path: /distribute/latest/concepts/publish-mobile-req-security/
+            title: Mobile Security VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-mobile-security-1/
+              title: VRC.Mobile.Security.1
+            - path: /distribute/latest/concepts/vrc-mobile-security-2/
+              title: VRC.Mobile.Security.2
+          - path: /distribute/latest/concepts/publish-mobile-req-input/
+            title: Mobile Input VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-mobile-input-1/
+              title: VRC.Mobile.Input.1
+            - path: /distribute/latest/concepts/vrc-mobile-input-2/
+              title: VRC.Mobile.Input.2
+            - path: /distribute/latest/concepts/vrc-mobile-input-3/
+              title: VRC.Mobile.Input.3
+            - path: /distribute/latest/concepts/vrc-mobile-input-4/
+              title: VRC.Mobile.Input.4
+            - path: /distribute/latest/concepts/vrc-mobile-input-5/
+              title: VRC.Mobile.Input.5
+            - path: /distribute/latest/concepts/vrc-mobile-input-6/
+              title: VRC.Mobile.Input.6
+            - path: /distribute/latest/concepts/vrc-mobile-input-7/
+              title: VRC.Mobile.Input.7
+          - path: /distribute/latest/concepts/publish-mobile-req-asset/
+            title: Mobile Asset VRCs
+            section:
+            - path: /distribute/latest/concepts/vrc-mobile-asset-1/
+              title: VRC.Mobile.Asset.1
+            - path: /distribute/latest/concepts/vrc-mobile-asset-2/
+              title: VRC.Mobile.Asset.2
+            - path: /distribute/latest/concepts/vrc-mobile-asset-3/
+              title: VRC.Mobile.Asset.3
+            - path: /distribute/latest/concepts/vrc-mobile-asset-4/
+              title: VRC.Mobile.Asset.4
+            - path: /distribute/latest/concepts/vrc-mobile-asset-5/
+              title: VRC.Mobile.Asset.5
+            - path: /distribute/latest/concepts/vrc-mobile-asset-6/
+              title: VRC.Mobile.Asset.6
+            - path: /distribute/latest/concepts/vrc-mobile-asset-7/
+              title: VRC.Mobile.Asset.7
+            - path: /distribute/latest/concepts/vrc-mobile-asset-8/
+              title: VRC.Mobile.Asset.8
+            - path: /distribute/latest/concepts/vrc-mobile-asset-9/
+              title: VRC.Mobile.Asset.9
+    - path: /distribute/latest/concepts/log-troubleshooting/
+      title: Troubleshooting and Gathering Logs
+    - path: /distribute/latest/concepts/publish-feedback/
+      title: Contacting the Oculus Publishing Team
+    - path: /distribute/latest/concepts/user-reviews/
+      title: Customer Reviews
+    - path: /distribute/latest/concepts/accessories-guidelines-go/
+      title: Oculus Go Accessories Guidelines
+    - path: /distribute/latest/concepts/accessories-guidelines/
+      title: Rift Accessories Guidelines
+      section:
+      - path: /distribute/latest/concepts/accessories-guidelines-audio/
+        title: Audio Module
+      - path: /distribute/latest/concepts/accessories-guidelines-facial-interface/
+        title: Facial Interface
+      - path: /distribute/latest/concepts/accessories-guidelines-touch/
+        title: Oculus Touch
+      - path: /distribute/latest/concepts/accessories-guidelines-mixed-reality-mount/
+        title: Mixed Reality Capture Mount
   - title: Support
     path: /support/
     section:
