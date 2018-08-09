@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" id="facebook" class="">
    <head>
+      <title id="pageTitle">{{ page.title }}</title>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer">
       <link type="text/css" rel="stylesheet" href="/css/recreations.css" />
@@ -9,12 +10,13 @@
       <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
       <script src="/js/jquery-3.3.1.min.js"></script>
       <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+      <link href="/css/open-iconic-bootstrap.min.css" rel="stylesheet">
       <style></style>
-      <title id="pageTitle">Oculus Developer Center | {{ page.title }}</title>
+      <link rel="icon" type="image/png" href="/favicon.png"
       <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
-      <meta name="title" content="Oculus Developer Center | {{ page.title }}">
+      <meta name="title" content="{{ page.title }}">
       <meta name="description" content="Oculus is the platform for developing PC, Mobile and Web virtual reality experiences.">
-      <meta property="og:title" content="Oculus Developer Center | {{ page.title }}">
+      <meta property="og:title" content="{{ page.title }}">
       <meta property="og:description" content="Oculus is the platform for developing PC, Mobile and Web virtual reality experiences.">
       <meta property="og:image" content="https://scontent.xx.fbcdn.net/v/t39.2365-6/18554265_129864567575457_5872180979031867392_n.jpg?_nc_cat=0&amp;oh=58ff43cae27d1f2ad491684f02fa9bea&amp;oe=5B8FE8A8">
       <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer">
@@ -100,65 +102,42 @@
                      </section>
                   </div>
                   <div class="_4hpg _3ck0">
-                     <div class="_rs9 _1xcn" style="text-align: left !important; padding: 35px !important;">
+                     <div class="_rs9 _1xcn" style="text-align: left !important; padding: 35px !important;" id="contentBody">
+                       <div id="rightNav">
+                       <ul>
+                       <li><a href="https://github.com/johndmulhausen/johndmulhausen.github.io/edit/master/{{ page.path }}"><span class="oi oi-pencil"></span> Edit This Page</a></li>
+                       <li style="padding-top:5px !important;"><a href="https://github.com/johndmulhausen/johndmulhausen.github.io/issues/new?body=Page: [{{ page.path }}](https://developer.oculus.com{{ page.url }})"><span class="oi oi-bug"></span> Report Issue</a></li>
+                       <li><hr></li>
+                       <li>
+                       <ul id="rightTOC">
+                       </ul>
+                       </li>
+                       <li><hr></li>
+                       <li>Rate This Page:<br>
+                        <div id="pd_rating_holder_8723510"></div>
+                        <script type="text/javascript">
+                        PDRTJS_settings_8723510 = {
+                        "id" : "8723510",
+                        "unique_id" : "{{ page.url }}",
+                        "title" : "{{ page.title }}",
+                        "permalink" : "{{ page.url }}"
+                        };
+                        (function(d,c,j){if(!document.getElementById(j)){var pd=d.createElement(c),s;pd.id=j;pd.src=('https:'==document.location.protocol)?'https://polldaddy.com/js/rating/rating.js':'http://i0.poll.fm/js/rating/rating.js';s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd,s);}}(document,'script','pd-rating-js'));
+                        </script>
+                       </li>
+                       </ul>
+                       </div>
                         {% if page.title and page.skip-autotitle != true %}
                         <h1>{{ page.title }}</h1>
                         {% endif %}
                         <div data-swiftype-index='true'>{{ content }}</div>
                      </div>
                   </div>
-                  <footer class="_5m3g">
+                  <footer class="_5m3g" id="footerContainer">
                      <footer id="page-footer">
                         <div class="bxPageSiteMap">
                            <div class="bxPageSiteMap__columnContainer" id="u_0_n">
-                              <div class="bxGrid bxGrid--parent">
-                                 <div class="bxGrid__column bxGrid__column-25 bxPageSiteMap__column">
-                                    <h3 class="bxHeading bxHeading--level-6 bxHeading--dark bxPageSiteMap__header">PRODUCT</h3>
-                                    <ul class="bxPageSiteMap__list">
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/experiences/" class="bxPageSiteMap__listItemLink">Experiences</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/rift/" class="bxPageSiteMap__listItemLink">Rift</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/go/" class="bxPageSiteMap__listItemLink">Go</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/gear-vr/" class="bxPageSiteMap__listItemLink">Gear VR</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/medium/" class="bxPageSiteMap__listItemLink">Medium</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculusforbusiness.com/" target="_blank" class="bxPageSiteMap__listItemLink">Oculus for Business</a></li>
-                                    </ul>
-                                 </div>
-                                 <div class="bxGrid__column bxGrid__column-25 bxPageSiteMap__column">
-                                    <h3 class="bxHeading bxHeading--level-6 bxHeading--dark bxPageSiteMap__header">DEVELOPERS</h3>
-                                    <ul class="bxPageSiteMap__list">
-                                       <li class="bxPageSiteMap__listItem"><a href="https://developer.oculus.com/" class="bxPageSiteMap__listItemLink">Developer Center</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://developer.oculus.com/documentation/" class="bxPageSiteMap__listItemLink">Docs</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://developer.oculus.com/downloads/" class="bxPageSiteMap__listItemLink">Downloads</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://developer.oculus.com/tools/" class="bxPageSiteMap__listItemLink">Tools</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://developer.oculus.com/blog/" class="bxPageSiteMap__listItemLink">Developer Blog</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://forums.oculusvr.com/developer/" target="_blank" class="bxPageSiteMap__listItemLink">Developer Forums</a></li>
-                                    </ul>
-                                 </div>
-                                 <div class="bxGrid__column bxGrid__column-25 bxPageSiteMap__column">
-                                    <h3 class="bxHeading bxHeading--level-6 bxHeading--dark bxPageSiteMap__header">COMPANY</h3>
-                                    <ul class="bxPageSiteMap__list">
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/blog/" class="bxPageSiteMap__listItemLink">Blog</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/careers/" class="bxPageSiteMap__listItemLink">Careers</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/news/" class="bxPageSiteMap__listItemLink">News</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculusbrand.com/" target="_blank" class="bxPageSiteMap__listItemLink">Brand Center</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/story-studio/" class="bxPageSiteMap__listItemLink">Story Studio</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/connect/" class="bxPageSiteMap__listItemLink">Oculus Connect</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/research/" class="bxPageSiteMap__listItemLink">Research</a></li>
-                                    </ul>
-                                 </div>
-                                 <div class="bxGrid__column bxGrid__column-25 bxPageSiteMap__column">
-                                    <h3 class="bxHeading bxHeading--level-6 bxHeading--dark bxPageSiteMap__header">COMMUNITY</h3>
-                                    <ul class="bxPageSiteMap__list">
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/vr-for-good/" class="bxPageSiteMap__listItemLink">VR for Good</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/launch-pad/" class="bxPageSiteMap__listItemLink">Launch Pad</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://forums.oculus.com/" class="bxPageSiteMap__listItemLink">Forums</a></li>
-                                       <hr class="_3fwr _4tae _uhr">
-                                       <li class="bxPageSiteMap__listItem"><a href="https://support.oculus.com/" class="bxPageSiteMap__listItemLink">Support</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://secure.oculus.com/my/orders/" class="bxPageSiteMap__listItemLink">Order History</a></li>
-                                       <li class="bxPageSiteMap__listItem"><a href="https://www.oculus.com/rift/setup/" class="bxPageSiteMap__listItemLink">Download Rift Setup</a></li>
-                                    </ul>
-                                 </div>
-                              </div>
+                              <div class="bxGrid bxGrid--parent" id="bottomNavContainer"></div>
                            </div>
                         </div>
                         <div class="bxPageFooter">
@@ -172,18 +151,9 @@
                                  <!-- react-mount-point-unstable -->
                               </div>
                               <div class="bxPageFooter__right">
-                                 <div class="_5f6b">©&nbsp;2018 Oculus VR, LLC.</div>
-                                 <ul class="bxPageFooter__nav">
-                                    <li class="bxPageFooter__navItem"><a href="https://www.oculus.com/legal/privacy-policy/" class="bxPageFooter__navLink" tabindex="20">Privacy</a></li>
-                                    <li class="bxPageFooter__navItem"><a href="https://www.oculus.com/legal/terms-of-service/" class="bxPageFooter__navLink" tabindex="20">Legal</a></li>
-                                 </ul>
-                                 <ul class="_2gx7">
-                                    <li class="_2gxi"><a href="https://www.facebook.com/oculusvr" target="_blank" class="_2gxj" tabindex="0"><i class="socialFacebook _3n44 _3n45 _3n46 _3n47 _1_uy _2gxk"></i></a></li>
-                                    <li class="_2gxi"><a href="https://instagram.com/oculus" target="_blank" class="_2gxj" tabindex="0"><i class="socialInstagram _3n44 _3n45 _3n46 _3n47 _1_uy _2gxk"></i></a></li>
-                                    <li class="_2gxi"><a href="https://twitter.com/oculus" target="_blank" class="_2gxj" tabindex="0"><i class="socialTwitter _3n44 _3n45 _3n46 _3n47 _1_uy _2gxk"></i></a></li>
-                                    <li class="_2gxi"><a href="https://www.youtube.com/user/oculusvr" target="_blank" class="_2gxj" tabindex="0"><i class="socialYouTube _3n44 _3n45 _3n46 _3n47 _1_uy _2gxk"></i></a></li>
-                                    <li class="_2gxi"><a href="https://www.twitch.tv/oculus/profile" target="_blank" class="_2gxj" tabindex="0"><i class="socialTwitch _3n44 _3n45 _3n46 _3n47 _1_uy _2gxk"></i></a></li>
-                                 </ul>
+                                 <ul class="bxPageFooter__nav" id="copyright"><li class="bxPageFooter__navItem"><b>©&nbsp;{{ 'now' | date: "%Y" }} {{ site.company }}.</b></li></ul>
+                                 <ul class="bxPageFooter__nav" id="textFooter"></ul>
+                                 <ul class="_2gx7" id="iconFooter"></ul>
                               </div>
                            </div>
                         </div>
