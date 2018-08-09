@@ -158,6 +158,15 @@ function writeNavigation(tree)
     }
   }
 
+  // build right nav
+  var tags = [ "h1","h2","h3" ];
+  var all_headings = [];
+
+  for(var i = 0; i < tags.length; i++) {
+    all_headings = all_headings.concat(document.getElementById('contentBody').getElementsByTagName(tags[i]));
+  }
+  console.log(all_headings);
+
   // write output to DOM
   document.getElementById('u_0_0').innerHTML = topNav.join(''); // topnav
   document.getElementById('leftnavContainer').innerHTML = leftNav.join(''); // leftnav

@@ -8,6 +8,31 @@
 @font-face{font-family:"Oculus Sans KR";font-style:normal;font-weight:600;src:local("Oculus Sans KR SemiBold"), local("OculusSansKR-SemiBold"), url(/fonts/OculusSansKR-SemiBold.otf) format("opentype")}
 @font-face{font-family:"Oculus Sans KR";font-style:normal;font-weight:900;src:local("Oculus Sans KR Bold"), local("OculusSans-Bold"), url(/fonts/OculusSans-Bold.otf) format("opentype")}
 
+#rightNav {
+  float: right;
+  background-color: #F0F0F0;
+  border: 1px solid #CCCCCC;
+  padding: 10px;
+  border-radius: 5px;
+  padding: 20px;
+  width: 200px;
+  max-width: 200px;
+}
+#rightNav ul, #rightNav li, #rightNav span {
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 2px !important;
+  padding: 1px !important;
+}
+.bxPageFooter__right ul, .bxPageFooter__right li {
+  margin: 0px !important;
+}
+#PDRTJS_8723510_msg, #rating_info_8723510 { display: none !important; }
+#pd_rating_holder_8723510 p { padding: 5px 0px 0px 0px !important; margin: 0px !important; }
+#pd_rating_holder_8723510 div { padding: 0px !important; margin: 0px !important; }
+
+
 .bxPageFooter__navItem, ._5f6b {
     letter-spacing: 0.35px;
     text-size-adjust: 100%;

@@ -10,6 +10,7 @@
       <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
       <script src="/js/jquery-3.3.1.min.js"></script>
       <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+      <link href="/css/open-iconic-bootstrap.min.css" rel="stylesheet">
       <style></style>
       <link rel="icon" type="image/png" href="/favicon.png"
       <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
@@ -92,8 +93,33 @@
                         </div>
                      </section>
                   </div>
-                  <div class="_4hpg _3ck0">
+                  <div class="_4hpg _3ck0" id="contentBody">
                      <div class="_rs9 _1xcn" style="text-align: left !important; padding: 35px !important;">
+                       <div id="rightNav">
+                       <ul>
+                       <li><a href="https://github.com/johndmulhausen/johndmulhausen.github.io/edit/master/{{ page.path }}"><span class="oi oi-pencil"></span> Edit This Page</a></li>
+                       <li style="padding-top:5px !important;"><a href="https://github.com/johndmulhausen/johndmulhausen.github.io/issues/new?body=Page: [{{ page.path }}](https://developer.oculus.com{{ page.url }})"><span class="oi oi-bug"></span> Report Issue</a></li>
+                       <li><hr></li>
+                       <li>
+                       <ul id="rightTOC">
+                       <li>Test</li>
+                       </ul>
+                       </li>
+                       <li><hr></li>
+                       <li>Rate This Page:<br>
+                        <div id="pd_rating_holder_8723510"></div>
+                        <script type="text/javascript">
+                        PDRTJS_settings_8723510 = {
+                        "id" : "8723510",
+                        "unique_id" : "{{ page.url }}",
+                        "title" : "{{ page.title }}",
+                        "permalink" : "{{ page.url }}"
+                        };
+                        (function(d,c,j){if(!document.getElementById(j)){var pd=d.createElement(c),s;pd.id=j;pd.src=('https:'==document.location.protocol)?'https://polldaddy.com/js/rating/rating.js':'http://i0.poll.fm/js/rating/rating.js';s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd,s);}}(document,'script','pd-rating-js'));
+                        </script>
+                       </li>
+                       </ul>
+                       </div>
                         {% if page.title and page.skip-autotitle != true %}
                         <h1>{{ page.title }}</h1>
                         {% endif %}
