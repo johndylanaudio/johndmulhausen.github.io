@@ -93,8 +93,8 @@
                         </div>
                      </section>
                   </div>
-                  <div class="_4hpg _3ck0" id="contentBody">
-                     <div class="_rs9 _1xcn" style="text-align: left !important; padding: 35px !important;">
+                  <div class="_4hpg _3ck0">
+                     <div class="_rs9 _1xcn" style="text-align: left !important; padding: 35px !important;" id="contentBody">
                        <div id="rightNav">
                        <ul>
                        <li><a href="https://github.com/johndmulhausen/johndmulhausen.github.io/edit/master/{{ page.path }}"><span class="oi oi-pencil"></span> Edit This Page</a></li>
@@ -102,7 +102,6 @@
                        <li><hr></li>
                        <li>
                        <ul id="rightTOC">
-                       <li>Test</li>
                        </ul>
                        </li>
                        <li><hr></li>
@@ -123,10 +122,10 @@
                         {% if page.title and page.skip-autotitle != true %}
                         <h1>{{ page.title }}</h1>
                         {% endif %}
-                        {{ content }}
+                        <div><p>{{ content }}</p></div>
                      </div>
                   </div>
-                  <footer class="_5m3g">
+                  <footer class="_5m3g" id="footerContainer">
                      <footer id="page-footer">
                         <div class="bxPageSiteMap">
                            <div class="bxPageSiteMap__columnContainer" id="u_0_n">

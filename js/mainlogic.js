@@ -159,13 +159,25 @@ function writeNavigation(tree)
   }
 
   // build right nav
+  var rightNav = new Array();
   var tags = [ "h1","h2","h3" ];
   var all_headings = [];
 
   for(var i = 0; i < tags.length; i++) {
-    all_headings = all_headings.concat(document.getElementById('contentBody').getElementsByTagName(tags[i]));
+    for(var j=0;j < document.getElementById('contentBody').getElementsByTagName(tags[i]).length; j++)
+    {
+      var thisElement = document.getElementById('contentBody').getElementsByTagName(tags[i])[j];
+      thisElement.className = "thisIsAHeading";
+      thisElement.innerHTML = '<a class="anchorFix" name="'+thisElement.id+'">' + thisElement.innerHTML + '</a>';
+    }
   }
-  console.log(all_headings);
+  for (var i = 0; i < document.getElementsByClassName("thisIsAHeading").length; i++)
+  {
+    var thisElement = document.getElementsByClassName("thisIsAHeading")[i];
+    var indentLevel = parseInt((thisElement.tagName.substring(1,2) - 1) * 7); // multiply heading level by 7px for indent level (h1=0, h2=7, h3=14)
+    rightNav.push('<li style="padding-left:' + indentLevel + 'px !important" class="rightNavLink"><a href="#'+thisElement.id+'">' + thisElement.innerText + '</a></li>')
+    thisElement.removeAttribute('id');
+  }
 
   // write output to DOM
   document.getElementById('u_0_0').innerHTML = topNav.join(''); // topnav
@@ -173,5 +185,6 @@ function writeNavigation(tree)
   document.getElementById('bottomNavContainer').innerHTML = bottomNav.join('') // bottomnav
   document.getElementById('textFooter').innerHTML = footerNavText.join('') // footer text links
   document.getElementById('iconFooter').innerHTML = footerNavIcon.join('') // footer icon links
+  document.getElementById('rightTOC').innerHTML = rightNav.join('') // right-nav links
   window.setTimeout(syncLeftNav,1);
 }
