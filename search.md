@@ -1,5 +1,6 @@
 ---
 title: Search results
+norightnav: true
 ---
 <style>
 .st-ui-type-heading, .st-ui-type-detail, .st-ui-type-detail-bold, .st-query-present, .st-ui-search-summary-query  {
@@ -15,4 +16,25 @@ title: Search results
 .st-ui-type-detail:before {
 }
 </style>
-<div class="st-search-container"></div>
+<script language="JavaScript">
+var replacedOnce = false;
+function massageSearchResultHTML()
+{
+  var x = document.getElementsByClassName("st-ui-type-detail");
+  console.log(x);
+  for (var i = 0; i < x.length; i++) {
+    var currentHTML = x[i].innerHTML;
+    var newHTML = currentHTML.replace('&nbsp;•&nbsp;','')
+    newHTML = newHTML.replace('https://forums.oculusvr.com','<b>Forums</b>: ')
+    newHTML = newHTML.replace('https://developer.oculus.com','<b>Docs</b>: ')
+    x[i].innerHTML = newHTML;
+  }
+}
+$("body").on('DOMSubtreeModified', "#searchResults", function(data) {
+  if (data.currentTarget.innerText.length > 0 && replacedOnce==false) {
+    massageSearchResultHTML();
+    replacedOnce = true;
+  }
+});
+</script>
+<div class="st-search-container" id="searchResults"></div>

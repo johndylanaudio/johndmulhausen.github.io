@@ -115,19 +115,20 @@ function syncLeftNav(navSpot)
 {
   // open leftnav tree to current URL, bolding the parent nav items as we go
   if (!navSpot) navSpot = document.getElementById("youAreHere");
-  navSpot.setAttribute("style", "font-weight: bold; color: black !important"); // bold current topic
-  navSpot.parentNode.removeAttribute("style"); // open tree by removing "display:none"
-  var children = navSpot.childNodes;
-  for(var i = 0; i < children.length; i++) {
-      if(children[i].nodeName == "I") {
-        children[i].setAttribute("class",children[i].getAttribute("class").replace("chevronRight","chevronDown")); // open chevron
-      }
+  if (navSpot){
+    navSpot.setAttribute("style", "font-weight: bold; color: black !important"); // bold current topic
+    navSpot.parentNode.removeAttribute("style"); // open tree by removing "display:none"
+    var children = navSpot.childNodes;
+    for(var i = 0; i < children.length; i++) {
+        if(children[i].nodeName == "I") {
+          children[i].setAttribute("class",children[i].getAttribute("class").replace("chevronRight","chevronDown")); // open chevron
+        }
+    }
+    if(navSpot.parentNode.parentNode.nodeName != "DIV") syncLeftNav(navSpot.parentNode) // go up level
   }
-  if(navSpot.parentNode.parentNode.nodeName != "DIV") syncLeftNav(navSpot.parentNode) // go up level
 }
 function writeNavigation(tree)
 {
-  console.log(tree)
 
   //build topnav
   var topNav = new Array();
@@ -143,7 +144,6 @@ function writeNavigation(tree)
   renderBottomNav(tree.bottomnav);
 
   // build footer nav
-  console.log(tree.footernav);
   var footerNavText = new Array();
   var footerNavIcon = new Array();
   for (var i=0;i<tree.footernav.length;i++)
@@ -185,6 +185,6 @@ function writeNavigation(tree)
   document.getElementById('bottomNavContainer').innerHTML = bottomNav.join('') // bottomnav
   document.getElementById('textFooter').innerHTML = footerNavText.join('') // footer text links
   document.getElementById('iconFooter').innerHTML = footerNavIcon.join('') // footer icon links
-  document.getElementById('rightTOC').innerHTML = rightNav.join('') // right-nav links
+  if (document.getElementById('rightTOC')) document.getElementById('rightTOC').innerHTML = rightNav.join('') // right-nav links
   window.setTimeout(syncLeftNav,1);
 }

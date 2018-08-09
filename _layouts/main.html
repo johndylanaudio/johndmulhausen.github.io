@@ -103,6 +103,7 @@
                   </div>
                   <div class="_4hpg _3ck0">
                      <div class="_rs9 _1xcn" style="text-align: left !important; padding: 35px !important;" id="contentBody">
+                      {% if page.norightnav != true %}
                        <div id="rightNav">
                        <ul>
                        <li><a href="https://github.com/johndmulhausen/johndmulhausen.github.io/edit/master/{{ page.path }}"><span class="oi oi-pencil"></span> Edit This Page</a></li>
@@ -127,6 +128,7 @@
                        </li>
                        </ul>
                        </div>
+                       {% endif %}
                         {% if page.title and page.skip-autotitle != true %}
                         <h1>{{ page.title }}</h1>
                         {% endif %}
