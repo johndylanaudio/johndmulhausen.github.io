@@ -8,6 +8,113 @@
 @font-face{font-family:"Oculus Sans KR";font-style:normal;font-weight:600;src:local("Oculus Sans KR SemiBold"), local("OculusSansKR-SemiBold"), url(/fonts/OculusSansKR-SemiBold.otf) format("opentype")}
 @font-face{font-family:"Oculus Sans KR";font-style:normal;font-weight:900;src:local("Oculus Sans KR Bold"), local("OculusSans-Bold"), url(/fonts/OculusSans-Bold.otf) format("opentype")}
 
+.bxPageFooter__navItem, ._5f6b {
+    letter-spacing: 0.35px;
+    text-size-adjust: 100%;
+    font-family: "Oculus Sans", Arial, Helvetica, sans-serif;
+    font-size: 14px !important;
+    font-weight: 400;
+    margin: 0px;
+}/*#H3_1*/
+
+
+.bxPageSiteMap__header {
+    color: rgb(255, 255, 255) !important;
+    height: 24px;
+    letter-spacing: 0.35px;
+    text-align: left;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    text-transform: uppercase;
+    width: 251px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 125.5px 18px;
+    transform-origin: 125.5px 18px;
+    caret-color: rgb(255, 255, 255);
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal 700 normal 14px / 24px "Oculus Sans", Arial, Helvetica, sans-serif !important;
+    margin: 0px;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 0px 0px 12px;
+}/*#H3_1*/
+
+.bxPageSiteMap__header:after {
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.35px;
+    text-align: left;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    text-transform: uppercase;
+    column-rule-color: rgb(255, 255, 255);
+    caret-color: rgb(255, 255, 255);
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal 700 normal 14px / 24px "Oculus Sans", Arial, Helvetica, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#H3_1:after*/
+
+.bxPageSiteMap__header:before {
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.35px;
+    text-align: left;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    text-transform: uppercase;
+    column-rule-color: rgb(255, 255, 255);
+    caret-color: rgb(255, 255, 255);
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal 700 normal 14px / 24px "Oculus Sans", Arial, Helvetica, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}/*#H3_1:before*/
+
+
+.bxPageSiteMap__listItem {
+    color: rgb(119, 120, 121);
+    text-align: left;
+    text-decoration: none solid rgb(119, 120, 121);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    column-rule-color: rgb(119, 120, 121);
+    perspective-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    caret-color: rgb(119, 120, 121);
+    border: 0px none rgb(119, 120, 121);
+    font: normal normal 400 normal 14px / 32px "Oculus Sans", Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(119, 120, 121) none 0px;
+    transition: color 0.25s ease 0s;
+}/*#A_1*/
+
+.bxPageSiteMap__listItem:after {
+    color: rgb(119, 120, 121);
+    text-align: left;
+    text-decoration: none solid rgb(119, 120, 121);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    column-rule-color: rgb(119, 120, 121);
+    caret-color: rgb(119, 120, 121);
+    border: 0px none rgb(119, 120, 121);
+    font: normal normal 400 normal 14px / 32px "Oculus Sans", Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(119, 120, 121) none 0px;
+}/*#A_1:after*/
+
+.bxPageSiteMap__listItem:before {
+    color: rgb(119, 120, 121);
+    text-align: left;
+    text-decoration: none solid rgb(119, 120, 121);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    column-rule-color: rgb(119, 120, 121);
+    caret-color: rgb(119, 120, 121);
+    border: 0px none rgb(119, 120, 121);
+    font: normal normal 400 normal 14px / 32px "Oculus Sans", Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(119, 120, 121) none 0px;
+}/*#A_1:before*/
+
 #leftnavContainer ul, #leftnavContainer li {
   list-style-type: none !important;
   font-family: "Oculus Sans", Arial, Helvetica, sans-serif;

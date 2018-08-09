@@ -56,6 +56,29 @@ function openBranch(srcObj)
     }
   }
 }
+var bottomNav = new Array();
+function renderBottomNav(tree)
+{
+  for (var l=0;l<tree.length;l++)
+  {
+    var thisNavNode = tree[l];
+    if (thisNavNode.column)
+    {
+      // this is a new column, create the container DIV, write header, recurse
+      bottomNav.push('<div class="bxGrid__column bxGrid__column-25 bxPageSiteMap__column">')
+      bottomNav.push('<h3 class="bxHeading bxHeading--level-6 bxHeading--dark bxPageSiteMap__header">'+ thisNavNode.columntitle +'</h3>')
+      bottomNav.push('<ul class="bxPageSiteMap__list">')
+      renderBottomNav(thisNavNode.column);
+      bottomNav.push('</ul></div>')
+    } else if (thisNavNode.path) {
+      // this is a simple link
+      bottomNav.push('<li class="bxPageSiteMap__listItem"><a href="'+thisNavNode.path+'" class="bxPageSiteMap__listItemLink">'+thisNavNode.title+'</a></li>')
+    } else if (thisNavNode.separator) {
+      // this is a separator HR line
+      bottomNav.push('<hr class="_3fwr _4tae _uhr">')
+    }
+  }
+}
 
 var leftNav = new Array();
 function renderLeftNav(tree)
@@ -85,8 +108,8 @@ function renderLeftNav(tree)
 
       leftNav.push('<li class="_37ds"><a href="' + tree[j].path + '" target="_self" class="_37e8"'+ youAreHere +'>'+ tree[j].title +'</a></li>')
 
+    }
   }
-}
 }
 function syncLeftNav(navSpot)
 {
@@ -113,11 +136,33 @@ function writeNavigation(tree)
     topNav.push('<li class="_m4a _m4h _nn8 _m4d _nna"><a href="'+ tree.topnav[i].path + '" class="_m4b" tabindex="10">'+ tree.topnav[i].title +'</a></li>')
   }
 
-  // build leftnav
-  renderLeftNav(tree.leftnav)
+  // build left nav
+  renderLeftNav(tree.leftnav);
+
+  // build bottom nav
+  renderBottomNav(tree.bottomnav);
+
+  // build footer nav
+  console.log(tree.footernav);
+  var footerNavText = new Array();
+  var footerNavIcon = new Array();
+  for (var i=0;i<tree.footernav.length;i++)
+  {
+    thisFooterItem = tree.footernav[i];
+    if (thisFooterItem.type=='text')
+    {
+      footerNavText.push('<li class="bxPageFooter__navItem"><a href="'+thisFooterItem.path+'" class="bxPageFooter__navLink" tabindex="20">'+thisFooterItem.title+'</a></li>')
+    } else if (thisFooterItem.type=='icon')
+    {
+      footerNavIcon.push('<li class="_2gxi"><a href="'+thisFooterItem.path+'" target="_blank" class="_2gxj" tabindex="0"><i class="'+thisFooterItem.icon+' _3n44 _3n45 _3n46 _3n47 _1_uy _2gxk"></i></a></li>')
+    }
+  }
 
   // write output to DOM
   document.getElementById('u_0_0').innerHTML = topNav.join(''); // topnav
   document.getElementById('leftnavContainer').innerHTML = leftNav.join(''); // leftnav
+  document.getElementById('bottomNavContainer').innerHTML = bottomNav.join('') // bottomnav
+  document.getElementById('textFooter').innerHTML = footerNavText.join('') // footer text links
+  document.getElementById('iconFooter').innerHTML = footerNavIcon.join('') // footer icon links
   window.setTimeout(syncLeftNav,1);
 }
