@@ -21,7 +21,6 @@ var replacedOnce = false;
 function massageSearchResultHTML()
 {
   var x = document.getElementsByClassName("st-ui-type-detail");
-  console.log(x);
   for (var i = 0; i < x.length; i++) {
     var currentHTML = x[i].innerHTML;
     var newHTML = currentHTML.replace('&nbsp;•&nbsp;','')

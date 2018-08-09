@@ -349,9 +349,7 @@ Bootstrap JS are loaded.
 
 ## Admonitions (notes)
 
-Current styles for admonitions in
-[`_scss/_notes.scss`](https://github.com/oculus/oculus.github.io/blob/master/_scss/_notes.scss)
-support these broad categories of admonitions:
+Current styles for admonitions support these broad categories:
 
 - Notes in the old style (no Liquid tag required)
 - Notes with a prefixed icon (no Liquid tag required)

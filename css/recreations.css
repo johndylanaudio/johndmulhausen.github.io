@@ -14,6 +14,24 @@
   pointer-events: none;
 }
 
+blockquote {
+  padding: 3px 10px 5px 15px !important;
+  background-color: #F0F0F0;
+  border-left: 3px black solid;
+  margin: 2px 0px 2px 0px !important;
+}
+.important
+{
+  border-left: 3px ORANGE solid !important;
+}
+.important::before {
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
+}
+.warning
+{
+  border-left: 3px RED solid !important;
+}
+
 #footerContainer {
   position: absolute !important;
 }
