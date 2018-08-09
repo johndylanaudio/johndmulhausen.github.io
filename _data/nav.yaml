@@ -59,7 +59,7 @@ bottomnav:
       path: https://www.oculus.com/connect/
     - title: Research
       path: https://www.oculus.com/research/
-  - columntitle:
+  - columntitle: Community
     column:
     - title: VR for Good
       path: https://www.oculus.com/vr-for-good/
@@ -75,27 +75,27 @@ bottomnav:
     - title: Download Rift Setup
       path: https://www.oculus.com/rift/setup/
 footernav:
-  - type: text
-    title: Privacy
-    path: https://www.oculus.com/legal/privacy-policy/
-  - type: text
-    title: Legal
-    path: https://www.oculus.com/legal/terms-of-service/
-  - type: icon
-    icon: socialFacebook
-    path: https://www.facebook.com/oculusvr
-  - type: icon
-    icon: socialInstagram
-    path: https://instagram.com/oculus
-  - type: icon
-    icon: socialTwitter
-    path: https://twitter.com/oculus
-  - type: icon
-    icon: socialYouTube
-    path: https://www.youtube.com/user/oculusvr
-  - type: icon
-    icon: socialTwitch
-    path: https://www.twitch.tv/oculus/profile
+- type: text
+  title: Privacy
+  path: https://www.oculus.com/legal/privacy-policy/
+- type: text
+  title: Legal
+  path: https://www.oculus.com/legal/terms-of-service/
+- type: icon
+  icon: socialFacebook
+  path: https://www.facebook.com/oculusvr
+- type: icon
+  icon: socialInstagram
+  path: https://instagram.com/oculus
+- type: icon
+  icon: socialTwitter
+  path: https://twitter.com/oculus
+- type: icon
+  icon: socialYouTube
+  path: https://www.youtube.com/user/oculusvr
+- type: icon
+  icon: socialTwitch
+  path: https://www.twitch.tv/oculus/profile
 leftnav:
   - title: Discover
     path: /

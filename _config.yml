@@ -12,6 +12,8 @@ safe: false
 lsi: false
 url: https://developer.oculus.com
 strict_front_matter: true
+company: "Oculus VR, LLC"
+
 
 defaults:
   -
