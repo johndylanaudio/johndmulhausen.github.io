@@ -14,6 +14,8 @@ url: https://developer.oculus.com
 strict_front_matter: true
 company: "Oculus VR, LLC"
 
+plugins:
+  - jekyll-sitemap
 
 defaults:
   -
