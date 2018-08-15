@@ -2,7 +2,7 @@ topnav:
   - title: Design
     path: /design/
     node: design
-  - title: Develop
+  - title: Documentation
     path: /develop/
     node: develop
   - title: Distribute
@@ -15,7 +15,7 @@ topnav:
     path: https://dashboard.oculus.com/
     node: manage
 bottomnav:
-  - columntitle: Product
+  - columntitle: Oculus Things
     column:
     - title: Experiences
       path: https://www.oculus.com/experiences/
@@ -79,7 +79,7 @@ footernav:
   title: Privacy
   path: https://www.oculus.com/legal/privacy-policy/
 - type: text
-  title: Legal
+  title: Legalese
   path: https://www.oculus.com/legal/terms-of-service/
 - type: icon
   icon: socialFacebook
@@ -97,7 +97,7 @@ footernav:
   icon: socialTwitch
   path: https://www.twitch.tv/oculus/profile
 leftnav:
-  - title: Discover
+  - title: Marketing Pages
     path: /
     section:
     - path: /pc/
