@@ -10,7 +10,8 @@
       <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
       <script src="/js/jquery-3.3.1.min.js"></script>
       <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-      <style></style>
+      <script src="/js/glossary.js"></script>
+      <link type="text/css" rel="stylesheet" href="/css/open-iconic-bootstrap.min.css" />
       <link rel="icon" type="image/png" href="/favicon.png"
       <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
       <meta name="title" content="{{ page.title }}">
@@ -132,6 +133,14 @@
                         {% if page.title and page.skip-autotitle != true %}
                         <h1>{{ page.title }}</h1>
                         {% endif %}
+                        <!-- tags -->
+                        {% unless page.notags == true %}
+                        {% assign keywords = page.keywords | split:"," %}
+                        {% for keyword in keywords %}{% assign strippedKeyword = keyword | strip %}
+                        {% capture keywordlist %}{{ keywordlist }}<a href="/glossary/?term={{strippedKeyword}}">{{strippedKeyword}}</a>{% unless forloop.last %}, {% endunless %}{% endcapture %}
+                        {% endfor %}
+                        {% if keywordlist.size > 0 %}<span class="oi oi-tags" style="padding-right: 10px; padding-left: 5px;"></span><span style="vertical-align: 2px">{{ keywordlist }}</span>{% endif %}
+                        {% endunless %}
                         <div data-swiftype-index='true'>{{ content }}</div>
                      </div>
                   </div>

@@ -1,5 +1,7 @@
 ---
 title: PC (Test)
+description: The homepage for the Oculus PC SDK.
+keywords: test, example, prototype, demo
 ---
 
 Testing the left nav.

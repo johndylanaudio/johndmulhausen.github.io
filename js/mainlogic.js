@@ -127,6 +127,18 @@ function syncLeftNav(navSpot)
     if(navSpot.parentNode.parentNode.nodeName != "DIV") syncLeftNav(navSpot.parentNode) // go up level
   }
 }
+function queryString()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
 function writeNavigation(tree)
 {
 
@@ -187,4 +199,50 @@ function writeNavigation(tree)
   document.getElementById('iconFooter').innerHTML = footerNavIcon.join('') // footer icon links
   if (document.getElementById('rightTOC')) document.getElementById('rightTOC').innerHTML = rightNav.join('') // right-nav links
   window.setTimeout(syncLeftNav,1);
+
+  if (window.location.pathname.indexOf("/glossary/")>-1)
+  {
+    // this is a glossary lookup
+    tagToLookup = decodeURI(queryString().term);
+    document.getElementById('glossaryTermTitle').innerHTML=tagToLookup;
+    document.getElementById('glossaryTermPagesTagged').innerHTML=tagToLookup;
+    tagToLookup;
+
+    // Get the term and definition
+    for (i=0;i<glossary.length;i++)
+    {
+      if (glossary[i].term.toLowerCase()==tagToLookup.toLowerCase())
+      {
+        document.getElementById('glossaryDef').innerHTML = glossary[i].def;
+      }
+    }
+    var matchingPages = new Array();
+    for (i=0;i<pages.length;i++)
+    {
+      thisPage = pages[i];
+      if (thisPage.keywords)
+      {
+        var keywordArray = thisPage.keywords.toString().split(",");
+        for (n=0;n<keywordArray.length;n++)
+        {
+          if (keywordArray[n].trim().toLowerCase()==tagToLookup.toLowerCase())
+          {
+            matchingPages.push(i); // log the id of the page w/matching keyword
+          }
+        }
+      }
+    }
+    var pagesOutput = new Array();
+    if (matchingPages.length > 0)
+    {
+      pagesOutput.push("<table><thead><tr><th>Page</th><th>Description</th></tr></thead><tbody>");
+      for(i=0;i<matchingPages.length;i++) {
+        thisPage = pages[matchingPages[i]];
+        pagesOutput.push("<tr><td><a href='" + thisPage.url + "'>" + thisPage.title + "</a></td><td>" + thisPage.description + "</td></tr>");
+      }
+      pagesOutput.push("</tbody></table>");
+    }
+    document.getElementById('glossaryPagesTagged').innerHTML = pagesOutput.join('');
+
+  }
 }

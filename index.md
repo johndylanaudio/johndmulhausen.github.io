@@ -1,5 +1,7 @@
 ---
 title: Welcome to the documentation test page!
+description: The test page for the Oculus Documentation.
+keywords: test, example, prototype, demo
 ---
 This is a demo of components, tags, styles, tools, and strategies we use for the
 docs.

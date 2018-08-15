@@ -1,0 +1,24 @@
+test: |
+  This is a test glossary entry.
+
+  I'm just **demonstrating** here that rich markup can be used.
+
+  [Go back to the home page](/).
+example: |
+  This is a test glossary entry.
+
+  I'm just **demonstrating** here that rich markup can be used.
+
+  [Go back to the home page](/).
+prototype: |
+  This is a test glossary entry.
+
+  I'm just **demonstrating** here that rich markup can be used.
+
+  [Go back to the home page](/).
+demo: |
+  This is a test glossary entry.
+
+  I'm just **demonstrating** here that rich markup can be used.
+
+  [Go back to the home page](/).
