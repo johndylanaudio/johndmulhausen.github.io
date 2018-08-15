@@ -25,11 +25,14 @@ blockquote {
   border-left: 3px ORANGE solid !important;
 }
 .important::before {
-  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
+/*  font-family: "Font Awesome 5 Free"; font-weight: 900; color: ORANGE; font-size: 24px; padding-top:5px !important; content: "\f071"; */
 }
 .warning
 {
   border-left: 3px RED solid !important;
+}
+.warning::before {
+/* font-family: "Font Awesome 5 Free"; font-weight: 900; color: RED; font-size: 24px; padding-top:5px !important; content: "\f00d"; */
 }
 
 #footerContainer {
