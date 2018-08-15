@@ -1633,3 +1633,7 @@ leftnav:
       title: Oculus dashboard
     - path: https://dashboard.oculus.com/notifications/
       title: Notifications
+  - title: Santa Cruz example
+    path: /santacruz/
+  - title: Rift example
+    path: /rift/

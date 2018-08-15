@@ -8,7 +8,9 @@ This is the overview for {{ page.device }}. When creating content for the
 {: .warning}
 {% endif %}
 
+# SDK List
+
 The list of SDKs you will be interested in are:
 
-{% for sdk in page.sdks %}- [{{ page.sdklink }}]({{ page.sdkname }})
+{% for sdk in page.sdks %}- [{{ sdk.sdkname }}]({{ sdk.sdklink }})
 {% endfor %}
